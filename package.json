@@ -25,5 +25,10 @@
     "typescript": "^5.5.4",
     "vite": "^5.3.5"
   },
+  "engines": {
+    "node": ">=18",
+    "yarn": ">=4",
+    "npm": ">=9"
+  },
   "packageManager": "yarn@4.3.1"
 }
