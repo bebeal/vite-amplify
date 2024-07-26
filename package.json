@@ -7,8 +7,8 @@
     "clean": "rimraf dist node_modules yarn.lock",
     "dev": "nodemon --watch server --exec tsx server",
     "build": "yarn build:client && yarn build:server",
-    "build:client": "tsc -b && vite build",
-    "build:server": "vite build --ssr src/entry-server.tsx",
+    "build:client": "tsc && vite build",
+    "build:server": "tsc -p tsconfig.node.json && vite build --ssr src/entry-server.tsx",
     "lint": "yarn eslint . --report-unused-disable-directives --max-warnings 0",
     "serve": "node server/server.js",
     "type-check": "tsc --noEmit"
@@ -17,7 +17,8 @@
     "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "react-tweet": "^3.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.7.0",

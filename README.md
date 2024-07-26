@@ -39,13 +39,19 @@ The build outputs to `dist` folder. The build is split into two parts, the clien
 dist
 ├── client
 │   ├── assets
-│   │   ├── index-C8gSz5Y-.js
-│   │   ├── index-Dwy8Y4BJ.css
+│   │   ├── index-Bye1jmga.css
+│   │   ├── index-CxSggbMY.js
 │   │   └── react-CHdo91hT.svg
 │   ├── favicon.ico
 │   ├── index.html
 │   └── tsconfig.app.tsbuildinfo
 └── server
+    ├── api
+    │   ├── api.d.ts
+    │   ├── api.js
+    │   └── tweet
+    │       ├── :id.d.ts
+    │       └── :id.js
     ├── entry-server.js
     ├── favicon.ico
     ├── server.d.ts
@@ -54,5 +60,5 @@ dist
     ├── vite.config.d.ts
     └── vite.config.js
 
-4 directories, 13 files
+6 directories, 17 files
 ```

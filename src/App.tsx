@@ -17,7 +17,7 @@ const App = () => {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Node 20 + Yarn 4 + Vite 5 SSR + React 18 + TypeScript 5 + Express 4 + React Router 6 + Eslint 9</h1>
+      <h1>Node 20 + Yarn 4 + Vite 5 + React 18 + TypeScript 5 + Express 4 + React Router 6 + Eslint 9</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
