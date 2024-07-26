@@ -1,3 +1,6 @@
+# OS
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -22,3 +25,24 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# yarn v2
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# env variables, special case exception to include .env.example
+**/*.env.*
+**/.env.*
+!.env.example
+
+# typescript
+*.tsbuild
+*.tsbuildinfo
+
+# Amplify build output
+.amplify-hosting
