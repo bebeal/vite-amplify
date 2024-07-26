@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+# vite-amplify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite SSR boilerplate template
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [Node 20](https://nodejs.org/en/)
+* [Yarn 4](https://yarnpkg.com/)
+* [Vite 5](https://vitejs.dev/)
+* [React 18](https://reactjs.org/)
+* [TypeScript 5](https://www.typescriptlang.org/)
+* [Express 4](https://expressjs.com/)
+* [React Router 6](https://reactrouter.com/)
+* [Eslint 9](https://eslint.org/)
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Using yarn
+```bash
+yarn install      // install dependencies
+yarn dev          // run the development server
+yarn build        // build both client side and server side build
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+**Additional Commands**
+
+```bash
+yarn clean        // clean everything thats generated in the build/dev process
+yarn build:client // build the client side to dist/client
+yarn build:server // build the server side to dist/server
+yarn lint         // run eslint
+```
+
+## Build
+
+The build outputs to `dist` folder. The build is split into two parts, the client side and the server side.
+
+```console
+dist
+├── client
+│   ├── assets
+│   │   ├── index-C8gSz5Y-.js
+│   │   ├── index-Dwy8Y4BJ.css
+│   │   └── react-CHdo91hT.svg
+│   ├── favicon.ico
+│   ├── index.html
+│   └── tsconfig.app.tsbuildinfo
+└── server
+    ├── entry-server.js
+    ├── favicon.ico
+    ├── server.d.ts
+    ├── server.js
+    ├── tsconfig.node.tsbuildinfo
+    ├── vite.config.d.ts
+    └── vite.config.js
+
+4 directories, 13 files
+```

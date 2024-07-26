@@ -4,22 +4,36 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "yarn eslint . --report-unused-disable-directives --max-warnings 0"
+    "clean": "rimraf dist node_modules yarn.lock",
+    "dev": "nodemon --watch server --exec tsx server",
+    "build": "yarn build:client && yarn build:server",
+    "build:client": "tsc -b && vite build",
+    "build:server": "vite build --ssr src/entry-server.tsx",
+    "lint": "yarn eslint . --report-unused-disable-directives --max-warnings 0",
+    "serve": "node server/server.js",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "express": "^4.19.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.7.0",
+    "@types/compression": "^1",
     "@types/eslint": "^9",
     "@types/eslint__js": "^8.42.3",
+    "@types/express": "^4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "dotenv": "^16.4.5",
     "eslint": "9",
+    "nodemon": "^3.1.4",
+    "rimraf": "^6.0.1",
+    "serve-static": "^1.15.0",
+    "tsx": "^4.16.2",
     "typescript": "^5.2.2",
     "typescript-eslint": "8.0.0-alpha.10",
     "vite": "^5.3.4"
