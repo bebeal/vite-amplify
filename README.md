@@ -10,6 +10,7 @@ Vite SSR boilerplate template
 * [React 18](https://reactjs.org/)
 * [TypeScript 5](https://www.typescriptlang.org/)
 * [Express 4](https://expressjs.com/)
+* [Tailwind 3](https://tailwindcss.com/)
 * [React Router 6](https://reactrouter.com/)
 * [Eslint 9](https://eslint.org/)
 
@@ -39,12 +40,11 @@ The build outputs to `dist` folder. The build is split into two parts, the clien
 dist
 ├── client
 │   ├── assets
-│   │   ├── index-Bye1jmga.css
-│   │   ├── index-CxSggbMY.js
+│   │   ├── index-Cdu9FcHy.css
+│   │   ├── index-bKl52jb5.js
 │   │   └── react-CHdo91hT.svg
 │   ├── favicon.ico
-│   ├── index.html
-│   └── tsconfig.app.tsbuildinfo
+│   └── index.html
 └── server
     ├── api
     │   ├── api.d.ts
@@ -60,5 +60,5 @@ dist
     ├── vite.config.d.ts
     └── vite.config.js
 
-6 directories, 17 files
+6 directories, 16 files
 ```

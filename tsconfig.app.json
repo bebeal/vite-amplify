@@ -26,6 +26,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "vite.config.ts", "tailwind.config.ts"],
   "exclude": ["node_modules", "dist", "server.ts", "api"]
 }
