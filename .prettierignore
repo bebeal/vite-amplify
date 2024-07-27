@@ -1,0 +1,23 @@
+# Ignore artifacts:
+build
+dist
+dist-*
+.amplify-hosting
+coverage
+.next
+api
+.tsbuild*
+node_modules
+
+# third party packages
+packages
+
+# Ignore all HTML files:
+*.html
+
+*.git
+*.svn
+*.hg
+
+.yarn
+yarn.lock

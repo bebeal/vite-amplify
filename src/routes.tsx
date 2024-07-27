@@ -6,7 +6,7 @@ const routes: RouteObject[] = [
   {
     path: '/',
     element: (
-      <ThemeProvider attribute="class" defaultTheme="system">
+      <ThemeProvider attribute='class' defaultTheme='system'>
         <Outlet />
       </ThemeProvider>
     ),
