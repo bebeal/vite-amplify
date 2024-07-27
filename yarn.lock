@@ -2438,6 +2438,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"github-buttons@npm:^2.22.0":
+  version: 2.28.0
+  resolution: "github-buttons@npm:2.28.0"
+  checksum: 10c0/28e224b73f08e41fa191d6927f8b43fbf12af4cd4535c6673acf436e6942b844c45f46275aaf9cb3ae1666ad71e93c6f4e21ee6dcfaeb3ce3663db474fa007a6
+  languageName: node
+  linkType: hard
+
 "glob-parent@npm:^5.1.2, glob-parent@npm:~5.1.2":
   version: 5.1.2
   resolution: "glob-parent@npm:5.1.2"
@@ -3755,6 +3762,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-github-btn@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "react-github-btn@npm:1.4.0"
+  dependencies:
+    github-buttons: "npm:^2.22.0"
+  peerDependencies:
+    react: ">=16.3.0"
+  checksum: 10c0/ce21b1081e8985fce93f19deb3ab3e20b36e80508fcd9346eb617728b2e242bea845434296a9b8acbc339259551d58e43d840dbe9ec03c21a7094a7a9038986e
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:^0.14.2":
   version: 0.14.2
   resolution: "react-refresh@npm:0.14.2"
@@ -4607,6 +4625,7 @@ __metadata:
     prettier: "npm:3.3.3"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    react-github-btn: "npm:^1.4.0"
     react-router-dom: "npm:^6.22.3"
     react-tweet: "npm:^3.2.1"
     rimraf: "npm:^6.0.1"
