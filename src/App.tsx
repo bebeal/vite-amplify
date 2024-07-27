@@ -5,9 +5,10 @@ import ViteLogo from './assets/vite.svg';
 import ReactLogo from './assets/react.svg';
 import TypeScriptLogo from './assets/typescript.svg';
 import ExpressLogo from './assets/express.svg';
-import TailwindLogo from './assets/tailwind.svg';
 import ReactRouterLogo from './assets/react-router.svg';
+import TailwindLogo from './assets/tailwind.svg';
 import ESLintLogo from './assets/eslint.svg';
+import PrettierLogo from './assets/prettier.svg';
 import AmplifyLogo from './assets/amplify.svg';
 
 const icons: { Logo: FC<SVGProps<SVGSVGElement> & { title?: string }>; href: string; label: string }[] = [
@@ -17,9 +18,10 @@ const icons: { Logo: FC<SVGProps<SVGSVGElement> & { title?: string }>; href: str
   { Logo: ReactLogo, href: 'https://react.dev/reference/react', label: 'React' },
   { Logo: TypeScriptLogo, href: 'https://www.typescriptlang.org/docs/', label: 'TypeScript' },
   { Logo: ExpressLogo, href: 'https://expressjs.com/en/4x/api.html', label: 'Express' },
-  { Logo: TailwindLogo, href: 'https://tailwindcss.com/docs', label: 'Tailwind' },
   { Logo: ReactRouterLogo, href: 'https://reactrouter.com/en/main', label: 'React Router' },
+  { Logo: TailwindLogo, href: 'https://tailwindcss.com/docs', label: 'Tailwind' },
   { Logo: ESLintLogo, href: 'https://eslint.org/docs/latest/', label: 'ESLint' },
+  { Logo: PrettierLogo, href: 'https://prettier.io/docs/en/index.html', label: 'Prettier' },
   { Logo: AmplifyLogo, href: 'https://docs.aws.amazon.com/amplify/latest/userguide', label: 'Amplify' },
 ];
 

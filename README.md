@@ -10,9 +10,10 @@ Vite SSR boilerplate template with express apis.
 * [React 18](https://react.dev/reference/react)
 * [TypeScript 5](https://www.typescriptlang.org/docs/)
 * [Express 4](https://expressjs.com/en/4x/api.html)
-* [Tailwind 3](https://tailwindcss.com/docs)
 * [React Router 6](https://reactrouter.com/en/main)
+* [Tailwind 3](https://tailwindcss.com/docs)
 * [Eslint 9](https://eslint.org/docs/latest/)
+* [Prettier 3](https://prettier.io/docs/en/)
 * [Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide)
 
 ## Development
