@@ -1,6 +1,6 @@
 # vite-amplify
 
-Vite SSR boilerplate template
+Vite SSR boilerplate template with express apis.
 
 ## Features
 
@@ -40,9 +40,8 @@ The build outputs to `dist` folder. The build is split into two parts, the clien
 dist
 ├── client
 │   ├── assets
-│   │   ├── index-Cdu9FcHy.css
-│   │   ├── index-bKl52jb5.js
-│   │   └── react-CHdo91hT.svg
+│   │   ├── index-D4jYsRc4.js
+│   │   └── index-GCS8C7MF.css
 │   ├── favicon.ico
 │   └── index.html
 └── server
@@ -60,5 +59,5 @@ dist
     ├── vite.config.d.ts
     └── vite.config.js
 
-6 directories, 16 files
+6 directories, 15 files
 ```
