@@ -1,20 +1,34 @@
 # vite-amplify
 
-Vite SSR boilerplate template with express apis.
+<p align="center">Vite template with SSR + Express APIs + Amplify Hosting</p>
+
+<p align="center">Demo <a href="https://vite-amplify.com">vite-amplify.com</a></p>
+
+![vite-amplify-landing](https://github.com/user-attachments/assets/d87ec9d7-2ef6-41e8-aaf5-132a202f7012)
 
 ## Features
 
-* [Node 20](https://nodejs.org/docs)
-* [Yarn 4](https://classic.yarnpkg.com/en/docs)
-* [Vite 5](https://vitejs.dev/guide/)
-* [React 18](https://react.dev/reference/react)
-* [TypeScript 5](https://www.typescriptlang.org/docs/)
-* [Express 4](https://expressjs.com/en/4x/api.html)
-* [React Router 6](https://reactrouter.com/en/main)
-* [Tailwind 3](https://tailwindcss.com/docs)
-* [Eslint 9](https://eslint.org/docs/latest/)
-* [Prettier 3](https://prettier.io/docs/en/)
+* [Node](https://nodejs.org/docs)
+* [Yarn](https://classic.yarnpkg.com/en/docs)
+* [Vite](https://vitejs.dev/guide/)
+* [React](https://react.dev/reference/react)
+* [TypeScript](https://www.typescriptlang.org/docs/)
+* [Express](https://expressjs.com/en/4x/api.html)
+* [React Router](https://reactrouter.com/en/main)
+* [Tailwind](https://tailwindcss.com/docs)
+* [Eslint](https://eslint.org/docs/latest/)
+* [Prettier](https://prettier.io/docs/en/)
 * [Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide)
+
+## Other Libraries
+
+* [svgr](https://github.com/gregberge/svgr)
+    * [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr)
+* [react-tweet](https://github.com/vercel/react-tweet)
+* [next-themes](https://github.com/pacocoursey/next-themes)
+* [nodemon](https://github.com/remy/nodemon)
+* [tsx](https://github.com/privatenumber/tsx)
+* [dotenv](https://github.com/motdotla/dotenv?tab=readme-ov-file)
 
 ## Development
 
@@ -32,6 +46,7 @@ yarn clean        // clean everything thats generated in the build/dev process
 yarn build:client // build the client side to dist/client
 yarn build:server // build the server side to dist/server
 yarn lint         // run eslint
+yarn format       // run prettier
 ```
 
 ## Build
@@ -66,7 +81,7 @@ dist
 
 ## Amplify Build
 
-`postbuild.sh` will take the above build and copy it over to the amplify build folder which is structured results in:
+`postbuild.sh` will take the above build and copy it over to the amplify build folder which results in:
 
 ```console
 .amplify-hosting

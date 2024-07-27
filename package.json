@@ -1,8 +1,15 @@
 {
   "name": "vite-amplify",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bebeal/vite-amplify"
+  },
+  "bugs": {
+    "url": "https://github.com/bebeal/vite-amplify/issues"
+  },
   "scripts": {
     "build": "yarn clean && yarn && yarn build:client && yarn build:server && yarn postbuild",
     "build:client": "tsc && vite build",
@@ -34,7 +41,6 @@
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
     "compression": "^1.7.4",
-    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "eslint": "9",
     "next-themes": "^0.3.0",
