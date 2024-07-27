@@ -42,7 +42,8 @@
     "tsx": "^4.16.2",
     "typescript": "^5.2.2",
     "typescript-eslint": "8.0.0-alpha.10",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "engines": {
     "node": ">=20",
