@@ -13,7 +13,7 @@ export const createServer = async (
   root = process.cwd(),
   env = process.env.NODE_ENV,
 ) => {
-  const isProd = (env ?? 'production') === 'production';
+  const isProd = env === 'production';
   const isTest = process.env.VITEST
 
   // Configure the server

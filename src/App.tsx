@@ -8,6 +8,7 @@ import ExpressLogo from './assets/express.svg';
 import TailwindLogo from './assets/tailwind.svg';
 import ReactRouterLogo from './assets/react-router.svg';
 import ESLintLogo from './assets/eslint.svg';
+import AmplifyLogo from './assets/amplify.svg';
 
 const icons: { Logo: FC<SVGProps<SVGSVGElement> & { title?: string }>, href: string, label: string }[] = [
   { Logo: NodeLogo, href: "https://nodejs.org/docs", label: "Node" },
@@ -19,6 +20,7 @@ const icons: { Logo: FC<SVGProps<SVGSVGElement> & { title?: string }>, href: str
   { Logo: TailwindLogo, href: "https://tailwindcss.com/docs", label: "Tailwind" },
   { Logo: ReactRouterLogo, href: "https://reactrouter.com/en/main", label: "React Router" },
   { Logo: ESLintLogo, href: "https://eslint.org/docs/latest/", label: "ESLint" },
+  { Logo: AmplifyLogo, href: "https://docs.aws.amazon.com/amplify/latest/userguide", label: "Amplify" },
 ];
 
 const App = () => {

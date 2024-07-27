@@ -4,15 +4,16 @@ Vite SSR boilerplate template with express apis.
 
 ## Features
 
-* [Node 20](https://nodejs.org/en/)
-* [Yarn 4](https://yarnpkg.com/)
-* [Vite 5](https://vitejs.dev/)
-* [React 18](https://reactjs.org/)
-* [TypeScript 5](https://www.typescriptlang.org/)
-* [Express 4](https://expressjs.com/)
-* [Tailwind 3](https://tailwindcss.com/)
-* [React Router 6](https://reactrouter.com/)
-* [Eslint 9](https://eslint.org/)
+* [Node 20](https://nodejs.org/docs)
+* [Yarn 4](https://classic.yarnpkg.com/en/docs)
+* [Vite 5](https://vitejs.dev/guide/)
+* [React 18](https://react.dev/reference/react)
+* [TypeScript 5](https://www.typescriptlang.org/docs/)
+* [Express 4](https://expressjs.com/en/4x/api.html)
+* [Tailwind 3](https://tailwindcss.com/docs)
+* [React Router 6](https://reactrouter.com/en/main)
+* [Eslint 9](https://eslint.org/docs/latest/)
+* [Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide)
 
 ## Development
 
@@ -64,9 +65,7 @@ dist
 
 ## Amplify Build
 
-* [Amplify - deployment manifest](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-express-server.html)
-
-`postbuild.sh` will take the above build and copy it over to the amplify build folder which is structured as follows:
+`postbuild.sh` will take the above build and copy it over to the amplify build folder which is structured results in:
 
 ```console
 .amplify-hosting
