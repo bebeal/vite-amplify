@@ -23,7 +23,7 @@ class Api {
   // returns a list of all the routes defined in the router
   public listRoutes(): string[] {
     return this.router.stack
-      .filter((r) => r.route?.path &&  r.route?.path?.length > 1)
+      .filter((r) => r.route?.path &&  r.route?.path?.length)
       .map(r => r.route!.path);
   }
 
