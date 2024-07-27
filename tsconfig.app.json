@@ -27,5 +27,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src", "vite.config.ts", "tailwind.config.ts"],
-  "exclude": ["node_modules", "dist", "server.ts", "api"]
+  "exclude": ["node_modules", "dist", "server.ts", "api", ".amplify-hosting"]
 }

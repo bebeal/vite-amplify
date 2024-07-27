@@ -23,5 +23,5 @@
     "forceConsistentCasingInFileNames": true,
   },
   "include": ["vite.config.ts", "server.ts", "api"],
-  "exclude": ["src", "dist"]
+  "exclude": ["src", "dist", ".amplify-hosting"]
 }

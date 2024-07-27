@@ -5,7 +5,7 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig((options) => {
-  const isDev = process.env.NODE_ENV === 'development';
+  const isProd = process.env.NODE_ENV === 'production';
 
   // Shared Config for both Client and SSR Build
   const sharedConfig = {
@@ -24,7 +24,7 @@ export default defineConfig((options) => {
     return {
       ...sharedConfig,
       build: {
-        minify: !isDev,
+        minify: isProd,
         ssr: true,
         emptyOutDir: false,
         outDir: 'dist/server',
@@ -32,17 +32,17 @@ export default defineConfig((options) => {
       ssr: {
         noExternal: ['react-tweet'],
       }
-    } satisfies UserConfig;;
+    } satisfies UserConfig;
   } else {
     // Client Build
     return {
       ...sharedConfig,
       build: {
-        minify: !isDev,
+        minify: isProd,
         ssrManifest: true,
         emptyOutDir: false,
         outDir: 'dist/client',
-      }
-    } satisfies UserConfig;;
+      },
+    } satisfies UserConfig;
   }
 });

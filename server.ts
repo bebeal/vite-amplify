@@ -13,7 +13,7 @@ export const createServer = async (
   root = process.cwd(),
   env = process.env.NODE_ENV,
 ) => {
-  const isProd = env === 'production';
+  const isProd = (env ?? 'production') === 'production';
   const isTest = process.env.VITEST
 
   // Configure the server
@@ -60,7 +60,7 @@ export const createServer = async (
         render = (await vite?.ssrLoadModule('/src/entry-server.tsx'))?.default.render;
       } else {
         // @ts-expect-error: will only exists in production
-        render = (await import('entry-server.js')).default.render;
+        render = (await import('./entry-server.js')).default.render;
       }
       // 4. render the app HTML. This assumes entry-server.js's exported `render` function calls appropriate framework SSR APIs, e.g. ReactDOMServer.renderToString()
       const appHtml = await render(req);
