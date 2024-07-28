@@ -1,10 +1,8 @@
 # vite-amplify
 
-<p align="center">Vite template with SSR + Express APIs + Amplify Hosting</p>
-
 <p align="center">Demo <a href="https://vite-amplify.com">vite-amplify.com</a></p>
 
-![vite-amplify-landing](https://github.com/user-attachments/assets/d87ec9d7-2ef6-41e8-aaf5-132a202f7012)
+![vite-amplify-landing](https://github.com/user-attachments/assets/e8b425da-55e0-46d9-ace3-496972f12cb4)
 
 ## Features
 
@@ -22,13 +20,12 @@
 
 ## Other Libraries
 
-* [svgr](https://github.com/gregberge/svgr)
-    * [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr)
-* [react-tweet](https://github.com/vercel/react-tweet)
-* [next-themes](https://github.com/pacocoursey/next-themes)
 * [nodemon](https://github.com/remy/nodemon)
 * [tsx](https://github.com/privatenumber/tsx)
 * [dotenv](https://github.com/motdotla/dotenv?tab=readme-ov-file)
+* [svgr](https://github.com/gregberge/svgr)
+* [react-tweet](https://github.com/vercel/react-tweet)
+* [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## Development
 
@@ -48,6 +45,17 @@ yarn build:server // build the server side to dist/server
 yarn lint         // run eslint
 yarn format       // run prettier
 ```
+
+## Amplify Hosting
+
+To deploy to Amplify Hosting
+
+1. Create repository from template
+2. Deploy to AWS
+
+**Note:** set env variable `YARN_ENABLE_IMMUTABLE_INSTALLS=0` in the Amplify console
+
+![amplify-deployement](https://github.com/user-attachments/assets/238a3d46-d229-4205-afe6-9b0516afdde4)
 
 ## Build
 
