@@ -21,7 +21,7 @@ const QuickDeployHighlight = ({ repo }: { repo: string }) => {
     <div className='bg-white dark:bg-[#0d1117] text-[#24292f] dark:text-[#c9d1d9] px-4 py-6 rounded-lg shadow-md w-full max-w-2xl mx-auto m-4 border border-[#d0d7de] dark:border-[#30363d]'>
       <a className='group text-2xl font-bold mb-4 text-center flex items-center justify-center gap-2' href={`https://github.com/${repo}`} target='_blank' rel='noopener noreferrer'>
         <GithubLogo className='w-5 h-5' />
-        <span className="group-hover:underline">{repo}</span>
+        <span className='group-hover:underline'>{repo}</span>
       </a>
       <p className='text-sm text-center mb-4'>Vite template with SSR + Express APIs + Amplify Hosting</p>
       <div className='flex items-center justify-between text-sm mt-4'>
