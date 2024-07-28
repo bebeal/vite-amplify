@@ -22,9 +22,12 @@ class Api {
 
   // returns a list of all the routes defined in the router
   public listRoutes(): string[] {
-    return this.router.stack
-      .filter((r) => r.route?.path &&  r.route?.path?.length)
-      .map(r => r.route!.path);
+    return [
+      '', // we filter `/` so it doesn't end in /api/ so add this manually which turns into /api
+      ...this.router.stack
+        .filter((r) => r.route?.path &&  r.route?.path?.length > 1)
+        .map(r => r.route!.path)
+    ]
   }
 
 }
