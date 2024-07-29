@@ -9,7 +9,6 @@ frontend:
         - yarn install
     build:
       commands:
-        - echo "NODE_ENV=production" > .env
         - yarn build
   artifacts:
       baseDirectory: .amplify-hosting
