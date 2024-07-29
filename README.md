@@ -1,8 +1,11 @@
+<div align="center">
+    
 # vite-amplify
 
-<p align="center">Demo <a href="https://vite-amplify.com">vite-amplify.com</a></p>
+<a href="https://vite-amplify.com">vite-amplify.com</a>
+</div>
 
-![vite-amplify-landing](https://github.com/user-attachments/assets/e8b425da-55e0-46d9-ace3-496972f12cb4)
+[![vite-amplify-landing](https://github.com/user-attachments/assets/e8b425da-55e0-46d9-ace3-496972f12cb4)](https://www.youtube.com/watch?v=dsHQUgwkZ7s)
 
 ## Features
 
