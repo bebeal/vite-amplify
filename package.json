@@ -18,7 +18,7 @@
     "dev": "nodemon --watch server --exec tsx server",
     "format": "prettier --write src server.ts api",
     "lint": "yarn eslint src server.ts api --report-unused-disable-directives --max-warnings 0",
-    "postbuild": "chmod +x postbuild.sh && postbuild.sh",
+    "postbuild": "chmod +x postbuild.sh && ./postbuild.sh",
     "serve": "node server/server.js",
     "type-check": "tsc --noEmit"
   },
