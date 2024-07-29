@@ -25,7 +25,7 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       logLevel: isTest ? 'error' : 'info',
       server: { middlewareMode: true, port: PORT },
       appType: 'custom',
-      build: { ssr: true },
+      build: { minify: true, ssr: true },
       ssr: {
         noExternal: ['react-tweet'],
       },

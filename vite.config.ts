@@ -5,8 +5,6 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig((options) => {
-  const isProd = process.env.NODE_ENV === 'production';
-
   // Shared Config for both Client and SSR Build
   const sharedConfig = {
     plugins: [
@@ -24,9 +22,8 @@ export default defineConfig((options) => {
     return {
       ...sharedConfig,
       build: {
-        minify: isProd,
+        minify: true,
         ssr: true,
-        emptyOutDir: false,
         outDir: 'dist/server',
       },
       ssr: {
@@ -38,9 +35,8 @@ export default defineConfig((options) => {
     return {
       ...sharedConfig,
       build: {
-        minify: isProd,
+        minify: true,
         ssrManifest: true,
-        emptyOutDir: false,
         outDir: 'dist/client',
       },
     } satisfies UserConfig;
