@@ -25,7 +25,7 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       logLevel: isTest ? 'error' : 'info',
       server: { middlewareMode: true, port: PORT },
       appType: 'custom',
-      build: { ssr: true },
+      build: { minify: true, ssr: true },
       ssr: {
         noExternal: ['react-tweet'],
       },
@@ -53,9 +53,10 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       let template = fs.readFileSync(path.resolve(__dirname, !isProd ? 'index.html' : '../client/index.html'), 'utf-8');
       // 2. Run transforms on the template. This injects the Vite HMR client, and global preambles from plugins like @vitejs/plugin-react
       template = (await vite?.transformIndexHtml(url, template)) || template;
-      // 3. Load the server entry. ssrLoadModule automatically transforms ESM source code to be usable in Node.js! There is no bundling required, and provides efficient invalidation similar to HMR.
+      // 3. Load the server entry
       let render;
       if (!isProd) {
+         // ssrLoadModule automatically transforms ESM source code to be usable in Node.js! There is no bundling required, and provides efficient invalidation similar to HMR.
         render = (await vite?.ssrLoadModule('/src/entry-server.tsx'))?.default.render;
       } else {
         // @ts-expect-error: will only exists in production
@@ -63,7 +64,7 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       }
       // 4. render the app HTML. This assumes entry-server.js's exported `render` function calls appropriate framework SSR APIs, e.g. ReactDOMServer.renderToString()
       const appHtml = await render(req);
-      // 5. Inject the app-rendered HTML into the template, heres where we use the ssr placeholder
+      // 5. Inject the app-rendered HTML into the template, heres where we use the ssr placeholder in the html
       const html = template.replace('<!--ssr-outlet-->', appHtml.html);
       // 6. Send the rendered HTML back.
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);

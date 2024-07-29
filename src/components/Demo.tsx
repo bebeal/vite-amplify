@@ -16,7 +16,7 @@ import { TweetSkeleton } from 'react-tweet';
 
 const AnimatedLine = () => <div className='h-1 bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse rounded-full w-full mx-5'></div>;
 
-const QuickDeployHighlight = ({ repo }: { repo: string }) => {
+export const RepoBanner = ({ repo }: { repo: string }) => {
   return (
     <div className='bg-white dark:bg-[#0d1117] text-[#24292f] dark:text-[#c9d1d9] px-4 py-6 rounded-lg shadow-md w-full max-w-2xl mx-auto m-4 border border-[#d0d7de] dark:border-[#30363d]'>
       <a className='group text-2xl font-bold mb-4 text-center flex items-center justify-center gap-2' href={`https://github.com/${repo}`} target='_blank' rel='noopener noreferrer'>
@@ -79,12 +79,6 @@ const QuickDeployHighlight = ({ repo }: { repo: string }) => {
     </div>
   );
 };
-
-export const RepoBanner = ({ repo }: { repo: string }) => (
-  <div className='flex flex-col items-center w-full h-auto'>
-    <QuickDeployHighlight repo={repo} />
-  </div>
-);
 
 const FeatureIcons = [
   { Logo: AmplifyLogo, href: 'https://docs.aws.amazon.com/amplify/latest/userguide', label: 'Amplify' },

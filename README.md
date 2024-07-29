@@ -70,10 +70,11 @@ The build outputs to `dist` folder. The build is split into two parts, the clien
 dist
 ├── client
 │   ├── assets
-│   │   ├── index-D4jYsRc4.js
-│   │   └── index-GCS8C7MF.css
+│   │   ├── index-CtZNOJEh.css           26.08 kB │ gzip:  5.94 kB
+│   │   └── index-wmHS3Azp.js            267.59 kB │ gzip: 90.73 kB
 │   ├── favicon.ico
-│   └── index.html
+│   ├── index.html
+│   └── robots.txt
 └── server
     ├── api
     │   ├── api.d.ts
@@ -81,20 +82,24 @@ dist
     │   └── tweet
     │       ├── :id.d.ts
     │       └── :id.js
-    ├── entry-server.js
+    ├── entry-server.js                  52.19 kB
     ├── favicon.ico
+    ├── robots.txt
     ├── server.d.ts
     ├── server.js
-    ├── tsconfig.node.tsbuildinfo
     ├── vite.config.d.ts
     └── vite.config.js
 
-6 directories, 15 files
+6 directories, 16 files
 ```
 
 ## Amplify Build
 
-`postbuild.sh` will take the above build and copy it over to the amplify build folder which results in:
+* `amplify.yml` is the build spec for Amplify Hosting ([AWS Docs](https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html))
+
+* `deploy-minifest.json` is the deployment spec and is what deploys the express api server ([AWS Docs](https://docs.aws.amazon.com/amplify/latest/userguide/ssr-deployment-specification.html))
+
+* `postbuild.sh` will take the build from `dist` and copy it over to the amplify build folder (`.amplify-hosting`) which results in ([AWS Docs](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-express-server.html)):
 
 ```console
 .amplify-hosting
@@ -102,10 +107,11 @@ dist
 │   └── default
 │       ├── client
 │       │   ├── assets
-│       │   │   ├── index-D4jYsRc4.js
-│       │   │   └── index-GCS8C7MF.css
+│       │   │   ├── index-CtZNOJEh.css   26.08 kB │ gzip:  5.94 kB
+│       │   │   └── index-wmHS3Azp.js    267.59 kB │ gzip: 90.73 kB
 │       │   ├── favicon.ico
-│       │   └── index.html
+│       │   ├── index.html
+│       │   └── robots.txt
 │       ├── package.json
 │       └── server
 │           ├── api
@@ -114,18 +120,19 @@ dist
 │           │   └── tweet
 │           │       ├── :id.d.ts
 │           │       └── :id.js
-│           ├── entry-server.js
+│           ├── entry-server.js          52.19 kB
 │           ├── favicon.ico
+│           ├── robots.txt
 │           ├── server.d.ts
 │           ├── server.js
-│           ├── tsconfig.node.tsbuildinfo
 │           ├── vite.config.d.ts
 │           └── vite.config.js
 ├── deploy-manifest.json
 └── static
-    └── favicon.ico
+    ├── favicon.ico
+    └── robots.txt
 
-9 directories, 18 files
+9 directories, 20 files
 ```
 
 ## Lighthouse
