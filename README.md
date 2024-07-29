@@ -2,9 +2,9 @@
     
 # vite-amplify
 
-<a href="https://vite-amplify.com">vite-amplify.com</a>
+<a href="https://vite-amplify.com" target="_blank">vite-amplify.com</a>
 
-<a href="https://www.youtube.com/watch?v=dsHQUgwkZ7s">~4 mins from fork-to-finish for a successful deployment</a>
+<a href="https://www.youtube.com/watch?v=dsHQUgwkZ7s" target="_blank">~4 mins from fork-to-finish for a successful deployment</a>
 </div>
 
 ![vite-amplify-landing](https://github.com/user-attachments/assets/e8b425da-55e0-46d9-ace3-496972f12cb4)
