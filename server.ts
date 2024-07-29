@@ -64,7 +64,7 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       }
       // 4. render the app HTML. This assumes entry-server.js's exported `render` function calls appropriate framework SSR APIs, e.g. ReactDOMServer.renderToString()
       const appHtml = await render(req);
-      // 5. Inject the app-rendered HTML into the template, heres where we use the ssr placeholder
+      // 5. Inject the app-rendered HTML into the template, heres where we use the ssr placeholder in the html
       const html = template.replace('<!--ssr-outlet-->', appHtml.html);
       // 6. Send the rendered HTML back.
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
