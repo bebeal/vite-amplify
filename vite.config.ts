@@ -24,6 +24,7 @@ export default defineConfig((options) => {
       build: {
         minify: true,
         ssr: true,
+        emptyOutDir: false,
         outDir: 'dist/server',
       },
       ssr: {
@@ -37,6 +38,7 @@ export default defineConfig((options) => {
       build: {
         minify: true,
         ssrManifest: true,
+        emptyOutDir: false,
         outDir: 'dist/client',
       },
     } satisfies UserConfig;

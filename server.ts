@@ -53,9 +53,10 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       let template = fs.readFileSync(path.resolve(__dirname, !isProd ? 'index.html' : '../client/index.html'), 'utf-8');
       // 2. Run transforms on the template. This injects the Vite HMR client, and global preambles from plugins like @vitejs/plugin-react
       template = (await vite?.transformIndexHtml(url, template)) || template;
-      // 3. Load the server entry. ssrLoadModule automatically transforms ESM source code to be usable in Node.js! There is no bundling required, and provides efficient invalidation similar to HMR.
+      // 3. Load the server entry
       let render;
       if (!isProd) {
+         // ssrLoadModule automatically transforms ESM source code to be usable in Node.js! There is no bundling required, and provides efficient invalidation similar to HMR.
         render = (await vite?.ssrLoadModule('/src/entry-server.tsx'))?.default.render;
       } else {
         // @ts-expect-error: will only exists in production
