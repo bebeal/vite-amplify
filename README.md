@@ -62,7 +62,7 @@ To deploy to Amplify Hosting
 
 **Note:** set env variable `YARN_ENABLE_IMMUTABLE_INSTALLS=0` in the Amplify console
 
-![amplify-deployement](https://github.com/user-attachments/assets/238a3d46-d229-4205-afe6-9b0516afdde4)
+![amplify-deployement](https://github.com/user-attachments/assets/82788a6e-afe4-4b4f-8a46-bbfe0d7cf772)
 
 ## Build
 
