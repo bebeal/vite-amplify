@@ -2,6 +2,8 @@
 
 # vite-amplify
 
+Template with Vite SSR + Express APIs + AWS Amplify Hosting.
+
 <a href="https://vite-amplify.com" rel="noopener noreferrer" target="_blank">vite-amplify.com</a>
 
 <a href="https://www.youtube.com/watch?v=dsHQUgwkZ7s" rel="noopener noreferrer" target="_blank">~4 mins from fork-to-finish for a successful deployment</a>
