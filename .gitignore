@@ -38,6 +38,7 @@ dist-ssr
 # env variables, special case exception to include .env.example
 **/*.env.*
 **/.env.*
+**/.env
 !.env.example
 
 # typescript
