@@ -148,3 +148,13 @@ export const ApiRoutes = () => {
     </div>
   );
 };
+
+export const Demo = ({ repo }: { repo: string }) => {
+  return (
+    <>
+      <RepoBanner repo={repo} />
+      <FeaturesList />
+      <ApiRoutes />
+    </>
+  );
+};
