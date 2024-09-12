@@ -72,27 +72,25 @@ The build outputs to `dist` folder. The build is split into two parts, the clien
 dist
 ├── client
 │   ├── assets
-│   │   ├── index-CtZNOJEh.css           26.08 kB │ gzip:  5.94 kB
-│   │   └── index-wmHS3Azp.js            267.59 kB │ gzip: 90.73 kB
-│   ├── favicon.ico
-│   ├── index.html
-│   └── robots.txt
+│   │   ├── index-CtZNOJEh.css       25.46 kB │ gzip:     5.79 kB
+│   │   └── index-LE-jQ0iQ.js       262.24 kB │ gzip:    88.57 kB
+│   ├── favicon.ico                  14.73 kB │ gzip:     4.46 kB
+│   ├── index.html                     .56 kB │ gzip:      .36 kB
+│   └── robots.txt                     .06 kB │ gzip:      .08 kB
 └── server
     ├── api
     │   ├── api.d.ts
-    │   ├── api.js
-    │   └── tweet
-    │       ├── :id.d.ts
-    │       └── :id.js
-    ├── entry-server.js                  52.19 kB
+    │   └── api.js
+    ├── entry-server.js
     ├── favicon.ico
     ├── robots.txt
     ├── server.d.ts
     ├── server.js
+    ├── tsconfig.node.tsbuildinfo
     ├── vite.config.d.ts
     └── vite.config.js
 
-6 directories, 16 files
+5 directories, 15 files
 ```
 
 ## Amplify Build
@@ -109,32 +107,30 @@ dist
 │   └── default
 │       ├── client
 │       │   ├── assets
-│       │   │   ├── index-CtZNOJEh.css   26.08 kB │ gzip:  5.94 kB
-│       │   │   └── index-wmHS3Azp.js    267.59 kB │ gzip: 90.73 kB
-│       │   ├── favicon.ico
-│       │   ├── index.html
-│       │   └── robots.txt
+│       │   │   ├── index-CtZNOJEh.css          25.46 kB │ gzip:     5.79 kB
+│       │   │   └── index-LE-jQ0iQ.js          262.24 kB │ gzip:    88.57 kB
+│       │   ├── favicon.ico                     14.73 kB │ gzip:     4.46 kB
+│       │   ├── index.html                        .56 kB │ gzip:      .36 kB
+│       │   └── robots.txt                        .06 kB │ gzip:      .08 kB
 │       ├── package.json
 │       └── server
 │           ├── api
 │           │   ├── api.d.ts
-│           │   ├── api.js
-│           │   └── tweet
-│           │       ├── :id.d.ts
-│           │       └── :id.js
-│           ├── entry-server.js          52.19 kB
+│           │   └── api.js
+│           ├── entry-server.js
 │           ├── favicon.ico
 │           ├── robots.txt
 │           ├── server.d.ts
 │           ├── server.js
+│           ├── tsconfig.node.tsbuildinfo
 │           ├── vite.config.d.ts
 │           └── vite.config.js
 ├── deploy-manifest.json
 └── static
-    ├── favicon.ico
-    └── robots.txt
+    ├── favicon.ico                             14.73 kB │ gzip:     4.46 kB
+    └── robots.txt                                .06 kB │ gzip:      .08 kB
 
-9 directories, 20 files
+8 directories, 19 files
 ```
 
 ## Lighthouse

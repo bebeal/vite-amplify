@@ -1,39 +1,40 @@
-import express, { Router } from 'express'
+import express, { Router, Request, Response } from 'express'
+import { getTweet } from 'react-tweet/api'
 
 class Api {
   public router: Router = express.Router()
 
-  constructor (routes: string[] = []) {
-    // json serialized list of the available API routes at /api
-    this.router.get('/', (req, res) => {
-      res.json({ routes: this.listRoutes().map(r => `/api${r}`) });
-    });
-    routes.forEach(path => this.addRoute(path));
-    // catch all 404 for everything else
-    this.router.use('*', (req, res) => {
-      res.status(404).send(`${req.originalUrl || req.url} not found`);
-    });
+  constructor() {
+    this.setupRoutes()
   }
 
-  public addRoute(path: string) {
-    // localizes the path to be a route to a handler
-    this.router.get(path, (req, res) => import(`./${path}.js`).then(m => m.default(req, res)));
+  private setupRoutes() {
+    this.router.get('/tweet/:id', this.getTweet)
+    // Add more routes here as needed
+
+    // catch all 404 for everything
+    this.router.use('*', (req, res) => {
+      res.status(404).send(`${req.originalUrl || req.url} not found`)
+    })
+  }
+
+  private getTweet = async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params
+      const tweet = await getTweet(id)
+      res.json({ data: tweet })
+    } catch (error) {
+      console.error(error)
+      res.status(500).json({ error: 'An error occurred while fetching the tweet' })
+    }
   }
 
   // returns a list of all the routes defined in the router
   public listRoutes(): string[] {
-    return [
-      '', // we filter `/` so it doesn't end in /api/ so add this manually which turns into /api
-      ...this.router.stack
-        .filter((r) => r.route?.path &&  r.route?.path?.length > 1)
-        .map(r => r.route!.path)
-    ]
+    return this.router.stack
+      .filter(r => r.route)
+      .map(r => r.route!.path);
   }
-
 }
 
-// add api routes here
-const api = new Api([
-  '/tweet/:id',
-]);
-export default api;
+export default new Api();

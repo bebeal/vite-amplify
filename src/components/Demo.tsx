@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import GithubLogo from '../assets/github.svg';
 import AmplifyLogo from '../assets/amplify.svg';
 import NodeLogo from '../assets/node.svg';
@@ -117,25 +116,12 @@ const TweetApiDemo = () => (
 );
 
 export const ApiRoutes = () => {
-  const [apiRoutes, setApiRoutes] = useState<string[]>([]);
-
-  useEffect(() => {
-    fetch('/api')
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.routes) {
-          setApiRoutes(data.routes);
-        }
-      })
-      .catch((error) => console.error('Error fetching API routes:', error));
-  }, []);
-
   return (
     <div className='flex flex-col w-full h-auto sm:justify-between items-center sm:gap-4 sm:flex-row'>
       <div className='flex w-auto flex-grow justify-center flex-col items-center'>
         <div className='text-xl font-bold mb-4'>API Routes</div>
         <ul className='list-disc w-auto justify-center'>
-          {apiRoutes.map((route, index) => (
+          {["api/tweet/:id"].map((route, index) => (
             <li key={index}>
               <a href={route.replace(':id', '1810310734091571240')} className='text-blue-400 hover:underline'>
                 {route}

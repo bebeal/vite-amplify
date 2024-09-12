@@ -44,6 +44,7 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
 
   // inject api router
   app.use('/api', api.router);
+  console.log('API routes:', api.listRoutes());
 
   // serve index.html from parent server for all non-file requests
   app.use('*', async (req, res, next) => {
