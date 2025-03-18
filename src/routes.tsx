@@ -1,4 +1,4 @@
-import { Outlet, RouteObject } from 'react-router-dom';
+import { Outlet, RouteObject } from 'react-router';
 import { ThemeProvider } from 'next-themes';
 import App from './App';
 

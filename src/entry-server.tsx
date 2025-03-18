@@ -1,7 +1,7 @@
 // entry-server: renders the app using the framework's SSR API: ReactDomServer.renderToString in this case
 import express from 'express';
 import ReactDomServer from 'react-dom/server';
-import { StaticRouterProvider, createStaticHandler, createStaticRouter } from 'react-router-dom/server';
+import { createStaticHandler, createStaticRouter, StaticRouterProvider } from 'react-router';
 import routes from './routes';
 
 import './index.css';
