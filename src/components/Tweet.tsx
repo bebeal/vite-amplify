@@ -1,4 +1,4 @@
-import { EmbeddedTweet, TweetNotFound, TweetSkeleton, useTweet, type TweetProps } from 'react-tweet';
+import { TweetProps, useTweet, TweetNotFound, TweetSkeleton, EmbeddedTweet } from "react-tweet";
 
 export const Tweet = (props: TweetProps) => {
   const { id, components, ...rest } = props;

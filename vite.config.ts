@@ -2,6 +2,7 @@ import type { UserConfig } from 'vite';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig((options) => {
@@ -14,6 +15,7 @@ export default defineConfig((options) => {
         svgrOptions: { dimensions: true, icon: true },
         include: '**/*.svg',
       }),
+      tailwindcss(),
     ],
   };
 

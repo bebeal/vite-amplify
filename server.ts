@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { ViteDevServer } from 'vite';
+import { isRunnableDevEnvironment, ViteDevServer } from 'vite';
 import express from 'express';
 import 'dotenv/config';
 import api from './api/api.js';
@@ -25,6 +25,11 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       logLevel: isTest ? 'error' : 'info',
       server: { middlewareMode: true, port: PORT },
       appType: 'custom',
+      environments: {
+        ssr: {
+          // by default, modules are run in the same process as the vite server
+        },
+      },
       build: { minify: true, ssr: true },
       ssr: {
         noExternal: ['react-tweet'],
@@ -46,6 +51,9 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
   app.use('/api', api.router);
   console.log('API routes:', api.listRoutes());
 
+  const environment = vite?.environments.ssr
+  console.log('Server environment:', environment?.mode, environment?.name);
+
   // serve index.html from parent server for all non-file requests
   app.use('*', async (req, res, next) => {
     try {
@@ -56,9 +64,9 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
       template = (await vite?.transformIndexHtml(url, template)) || template;
       // 3. Load the server entry
       let render;
-      if (!isProd) {
-         // ssrLoadModule automatically transforms ESM source code to be usable in Node.js! There is no bundling required, and provides efficient invalidation similar to HMR.
-        render = (await vite?.ssrLoadModule('/src/entry-server.tsx'))?.default.render;
+      if (!isProd && environment && isRunnableDevEnvironment(environment)) {
+        // 3. Load the server entry. import(url) automatically transforms ESM source code to be usable in Node.js
+        render = (await environment.runner.import('/src/entry-server.tsx')).default.render;
       } else {
         // @ts-expect-error: will only exists in production
         render = (await import('./entry-server.js')).default.render;
@@ -72,7 +80,9 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
     } catch (e: unknown) {
       const error = e as Error;
       // let Vite fix the stack trace so it maps back to your actual source code.
-      !isProd && vite?.ssrFixStacktrace(error);
+      if (!isProd && vite) {
+        vite.ssrFixStacktrace(error);
+      }
       next(e);
     }
   });
