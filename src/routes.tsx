@@ -10,6 +10,7 @@ const routes: RouteObject[] = [
         <Outlet />
       </ThemeProvider>
     ),
+    hydrateFallbackElement: null,
     children: [{ index: true, element: <App /> }],
   },
 ];

@@ -5,6 +5,14 @@ import routes from './routes';
 
 import './index.css';
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes, {
+  future: {
+    v7_fetcherPersist: true,
+    v7_normalizeFormMethod: true,
+    v7_partialHydration: true,
+    v7_relativeSplatPath: true,
+    v7_skipActionErrorRevalidation: true,
+  }
+});
 
-ReactDOM.hydrateRoot(document.getElementById('root') as HTMLElement, <RouterProvider router={router} fallbackElement={null} future={{ v7_startTransition: true }} />);
+ReactDOM.hydrateRoot(document.getElementById('root') as HTMLElement, <RouterProvider router={router} future={{ v7_startTransition: true, }} />);
