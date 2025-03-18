@@ -1,7 +1,7 @@
 /* import tailwindcss base styles: https://tailwindcss.com/docs/installation/using-vite */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-// dark theme to be driven by a CSS selector
+/* dark theme to be driven by a CSS selector */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
