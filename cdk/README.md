@@ -22,7 +22,7 @@ yarn add aws-cdk ts-node @types/source-map-support -D
 
 ```json
 {
-  "app": "ts-node --project cdk/tsconfig.json --prefer-ts-exts cdk/cdk.ts",
+  "app": "CDK_OUTDIR=cdk.out tsx cdk/cdk.ts"
 }
 ```
 
@@ -41,7 +41,7 @@ yarn add aws-cdk ts-node @types/source-map-support -D
 }
 ```
 
-* Define a stack instance in `cdk/stacks/next-stack.ts`:
+* Define a stack instance in `cdk/stacks/vite-stack.ts`:
   * Add a role with AdministratorAccess
   * Add an S3 bucket
 
@@ -51,10 +51,10 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
 
-interface NextStackProps extends cdk.StackProps {
+interface ViteStackProps extends cdk.StackProps {
 }
-export class NextStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props: NextStackProps) {
+export class VitetStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props: ViteStackProps) {
     super(scope, id, props);
 
     // IAM Admin Role
@@ -74,11 +74,11 @@ export class NextStack extends cdk.Stack {
 
 ```jsx
 import { App } from "aws-cdk-lib";
-import { NextStack } from "./next-stack";
+import { ViteStack } from "./vite-stack";
 
 export const makeStacks = (app: App) => {
   const stacks = [
-    new NextStack(app, "NextStack", {
+    new ViteStack(app, "ViteStack", {
       env: {region: "us-west-2"},
     }),
   ];
@@ -121,8 +121,8 @@ try {
 ```json
 {
   "scripts": {
-    "build:cdk": "CDK_OUTDIR=cdk.out ts-node --project cdk/tsconfig.json cdk/cdk.ts",
-    "deploy:cdk": "yarn cdk:build && cdk deploy",
+    "build:cdk": "CDK_OUTDIR=cdk.out tsx cdk/cdk.ts",
+    "deploy:cdk": "cdk deploy",
   }
 }
 ```

@@ -24,6 +24,7 @@ Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 * [Eslint](https://eslint.org/docs/latest/)
 * [Prettier](https://prettier.io/docs/en/)
 * [Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide)
+* [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
 
 ## Other Libraries
 
