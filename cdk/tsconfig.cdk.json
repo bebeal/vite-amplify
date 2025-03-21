@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"target": "ES2018",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strictPropertyInitialization": false,
+		"experimentalDecorators": true,
+		"inlineSourceMap": true,
+		"inlineSources": true,
+		"declaration": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+	},
+	"include": ["vite-env.d.ts", "cdk", "stacks", "constructs"],
+	"exclude": [
+		"components",
+		"src",
+		"public",
+		".vite",
+		"node_modules",
+		"cdk.out"
+	]
+}
