@@ -39,9 +39,19 @@ Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 Using yarn
 ```bash
 yarn install      // install dependencies
+```
+
+```bash
 yarn dev          // run the development server
+```
+
+<img width="896" alt="Screenshot 2025-03-20 at 10 07 31 PM" src="https://github.com/user-attachments/assets/f99e4c4f-24c6-4162-9e46-e3dd675f9dac" />
+
+```bash
 yarn build        // build both client side and server side build
 ```
+
+<img width="894" alt="Screenshot 2025-03-20 at 10 08 45 PM" src="https://github.com/user-attachments/assets/2eb9c561-bd5a-411c-9acf-d31074abb794" />
 
 **Additional Commands**
 
@@ -52,6 +62,15 @@ yarn build:server // build the server side to dist/server
 yarn lint         // run eslint
 yarn format       // run prettier
 ```
+
+## CDK
+
+```bash
+yarn build:cdk    // build the cdk
+yarn deploy:cdk   // deploy the cdk
+```
+
+<img width="788" alt="Screenshot 2025-03-21 at 12 46 43 AM" src="https://github.com/user-attachments/assets/ad9d52cc-9046-4cd2-b072-1b47083eb48d" />
 
 ## Amplify Hosting
 
@@ -138,6 +157,4 @@ dist
 <img width="344" alt="100_91_96_100" src="https://github.com/user-attachments/assets/aa73009d-2c8d-4b48-bd8c-231418a8f051">
 
 ¯\\_(ツ)_/¯ 🧂 [lighthouse_summary_100_91_96_100_july282024.pdf](https://github.com/user-attachments/files/16407666/lighthouse_summary_100_91_96_100_july282024.pdf)
-
-
 

@@ -17,7 +17,7 @@
     "build:cdk": "CDK_OUTDIR=cdk.out tsx cdk/cdk.ts",
     "clean": "rimraf dist node_modules yarn.lock .amplify-hosting cdk.out",
     "dev": "nodemon --watch server --exec tsx server",
-    "deploy:cdk": "yarn build:cdk && cdk deploy",
+    "deploy:cdk": "cdk deploy",
     "format": "prettier --write src server.ts api",
     "lint": "yarn eslint src server.ts api --report-unused-disable-directives --max-warnings 0",
     "postbuild": "chmod +x postbuild.sh && ./postbuild.sh",
