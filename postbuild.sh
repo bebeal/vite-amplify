@@ -5,6 +5,9 @@
 rm -rf node_modules/@swc
 rm -rf node_modules/@esbuild
 rm -rf node_modules/@eslint
+rm -rf node_modules/@babel
+rm -rf node_modules/@prettier
+rm -rf node_modules/aws-cdk-lib
 
 rm -rf ./.amplify-hosting
 
