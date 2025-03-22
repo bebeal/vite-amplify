@@ -1,11 +1,19 @@
+import 'dotenv/config';
+import express from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { isRunnableDevEnvironment, ViteDevServer } from 'vite';
-import express from 'express';
-import 'dotenv/config';
 import api from './api/api.js';
 
+// Server log function that adds timestamp
+const serverLog = (...args: unknown[]) => {
+  const timeColor = '\x1b[90m'; // Gray color code
+  const serverColor = '\x1b[35m'; // Purple color for [server]
+  const resetColor = '\x1b[0m'; // Reset color
+  const time = new Date().toLocaleTimeString();
+  console.log(`${timeColor}${time} ${serverColor}[server]${resetColor}`, ...args);
+}
 const __dirname: string = path.dirname(fileURLToPath(import.meta.url));
 const PORT = parseFloat(process.env.PORT || '5137');
 
@@ -49,10 +57,10 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
 
   // inject api router
   app.use('/api', api.router);
-  console.log('API routes:', api.listRoutes());
+  serverLog('API routes:', api.listRoutes());
 
   const environment = vite?.environments.ssr
-  console.log('Server environment:', environment?.mode, environment?.name);
+  serverLog('Server environment:', environment?.mode, environment?.name);
 
   // serve index.html from parent server for all non-file requests
   app.use('*', async (req, res, next) => {
@@ -94,7 +102,7 @@ createServer().then(({ expressServer }) => {
   const listener = expressServer.listen(PORT, () => {
     const addressInfo = listener.address();
     if (addressInfo && typeof addressInfo !== 'string') {
-      console.log(`Express server listening on (${addressInfo?.family}) ${addressInfo?.address === '::' ? 'http://localhost' : addressInfo?.address}:${addressInfo?.port}`);
+      serverLog(`Express server listening on (${addressInfo?.family}) ${addressInfo?.address === '::' ? 'http://localhost' : addressInfo?.address}:${addressInfo?.port}`);
     }
   });
 });

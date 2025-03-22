@@ -24,6 +24,7 @@ Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 * [Eslint](https://eslint.org/docs/latest/)
 * [Prettier](https://prettier.io/docs/en/)
 * [Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide)
+* [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
 
 ## Other Libraries
 
@@ -39,9 +40,19 @@ Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 Using yarn
 ```bash
 yarn install      // install dependencies
+```
+
+```bash
 yarn dev          // run the development server
+```
+
+<img width="896" alt="Screenshot 2025-03-20 at 10 07 31 PM" src="https://github.com/user-attachments/assets/f99e4c4f-24c6-4162-9e46-e3dd675f9dac" />
+
+```bash
 yarn build        // build both client side and server side build
 ```
+
+<img width="894" alt="Screenshot 2025-03-20 at 10 08 45 PM" src="https://github.com/user-attachments/assets/2eb9c561-bd5a-411c-9acf-d31074abb794" />
 
 **Additional Commands**
 
@@ -52,6 +63,15 @@ yarn build:server // build the server side to dist/server
 yarn lint         // run eslint
 yarn format       // run prettier
 ```
+
+## CDK
+
+```bash
+yarn build:cdk    // build the cdk
+yarn deploy:cdk   // deploy the cdk
+```
+
+<img width="788" alt="Screenshot 2025-03-21 at 12 46 43 AM" src="https://github.com/user-attachments/assets/ad9d52cc-9046-4cd2-b072-1b47083eb48d" />
 
 ## Amplify Hosting
 
@@ -72,25 +92,28 @@ The build outputs to `dist` folder. The build is split into two parts, the clien
 dist
 ├── client
 │   ├── assets
-│   │   ├── index-CtZNOJEh.css       25.46 kB │ gzip:     5.79 kB
-│   │   └── index-LE-jQ0iQ.js       262.24 kB │ gzip:    88.57 kB
+│   │   ├── index-DY63Vhwi.css       28.21 kB │ gzip:     6.29 kB
+│   │   └── index-Dxa5nZum.js       326.88 kB │ gzip:   109.05 kB
 │   ├── favicon.ico                  14.73 kB │ gzip:     4.46 kB
 │   ├── index.html                     .56 kB │ gzip:      .36 kB
 │   └── robots.txt                     .06 kB │ gzip:      .08 kB
 └── server
     ├── api
-    │   ├── api.d.ts
-    │   └── api.js
-    ├── entry-server.js
-    ├── favicon.ico
-    ├── robots.txt
-    ├── server.d.ts
-    ├── server.js
-    ├── tsconfig.node.tsbuildinfo
-    ├── vite.config.d.ts
-    └── vite.config.js
+    │   ├── api.d.ts                   .21 kB │ gzip:      .16 kB
+    │   └── api.js                    1.01 kB │ gzip:      .47 kB
+    ├── entry-server.js              56.77 kB │ gzip:    20.72 kB
+    ├── favicon.ico                  14.73 kB │ gzip:     4.46 kB
+    ├── plugins
+    │   ├── console-prefix.d.ts        .19 kB │ gzip:      .17 kB
+    │   └── console-prefix.js          .89 kB │ gzip:      .40 kB
+    ├── robots.txt                     .06 kB │ gzip:      .08 kB
+    ├── server.d.ts                    .25 kB │ gzip:      .18 kB
+    ├── server.js                     4.52 kB │ gzip:     1.84 kB
+    ├── tsconfig.node.tsbuildinfo    47.02 kB │ gzip:    14.94 kB
+    ├── vite.config.d.ts               .08 kB │ gzip:      .10 kB
+    └── vite.config.js                1.34 kB │ gzip:      .50 kB
 
-5 directories, 15 files
+6 directories, 17 files
 ```
 
 ## Amplify Build
@@ -107,30 +130,33 @@ dist
 │   └── default
 │       ├── client
 │       │   ├── assets
-│       │   │   ├── index-CtZNOJEh.css          25.46 kB │ gzip:     5.79 kB
-│       │   │   └── index-LE-jQ0iQ.js          262.24 kB │ gzip:    88.57 kB
+│       │   │   ├── index-DY63Vhwi.css          28.21 kB │ gzip:     6.29 kB
+│       │   │   └── index-Dxa5nZum.js          326.88 kB │ gzip:   109.05 kB
 │       │   ├── favicon.ico                     14.73 kB │ gzip:     4.46 kB
 │       │   ├── index.html                        .56 kB │ gzip:      .36 kB
 │       │   └── robots.txt                        .06 kB │ gzip:      .08 kB
-│       ├── package.json
+│       ├── package.json                         2.17 kB │ gzip:      .88 kB
 │       └── server
 │           ├── api
-│           │   ├── api.d.ts
-│           │   └── api.js
-│           ├── entry-server.js
-│           ├── favicon.ico
-│           ├── robots.txt
-│           ├── server.d.ts
-│           ├── server.js
-│           ├── tsconfig.node.tsbuildinfo
-│           ├── vite.config.d.ts
-│           └── vite.config.js
-├── deploy-manifest.json
+│           │   ├── api.d.ts                      .21 kB │ gzip:      .16 kB
+│           │   └── api.js                       1.01 kB │ gzip:      .47 kB
+│           ├── entry-server.js                 56.77 kB │ gzip:    20.72 kB
+│           ├── favicon.ico                     14.73 kB │ gzip:     4.46 kB
+│           ├── plugins
+│           │   ├── console-prefix.d.ts           .19 kB │ gzip:      .17 kB
+│           │   └── console-prefix.js             .89 kB │ gzip:      .40 kB
+│           ├── robots.txt                        .06 kB │ gzip:      .08 kB
+│           ├── server.d.ts                       .25 kB │ gzip:      .18 kB
+│           ├── server.js                        4.52 kB │ gzip:     1.84 kB
+│           ├── tsconfig.node.tsbuildinfo       47.02 kB │ gzip:    14.94 kB
+│           ├── vite.config.d.ts                  .08 kB │ gzip:      .10 kB
+│           └── vite.config.js                   1.34 kB │ gzip:      .50 kB
+├── deploy-manifest.json                          .83 kB │ gzip:      .33 kB
 └── static
     ├── favicon.ico                             14.73 kB │ gzip:     4.46 kB
     └── robots.txt                                .06 kB │ gzip:      .08 kB
 
-8 directories, 19 files
+9 directories, 21 files
 ```
 
 ## Lighthouse
@@ -138,6 +164,4 @@ dist
 <img width="344" alt="100_91_96_100" src="https://github.com/user-attachments/assets/aa73009d-2c8d-4b48-bd8c-231418a8f051">
 
 ¯\\_(ツ)_/¯ 🧂 [lighthouse_summary_100_91_96_100_july282024.pdf](https://github.com/user-attachments/files/16407666/lighthouse_summary_100_91_96_100_july282024.pdf)
-
-
 

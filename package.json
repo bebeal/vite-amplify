@@ -11,11 +11,13 @@
     "url": "https://github.com/bebeal/vite-amplify/issues"
   },
   "scripts": {
-    "build": "yarn clean && yarn && yarn build:client && yarn build:server && yarn postbuild",
+    "build": "yarn build:cdk && yarn build:client && yarn build:server && yarn postbuild",
     "build:client": "tsc && vite build",
     "build:server": "tsc -p tsconfig.node.json && vite build --ssr src/entry-server.tsx",
-    "clean": "rimraf dist node_modules yarn.lock .amplify-hosting",
+    "build:cdk": "CDK_OUTDIR=cdk.out tsx cdk/cdk.ts",
+    "clean": "rimraf dist node_modules yarn.lock .amplify-hosting cdk.out",
     "dev": "nodemon --watch server --exec tsx server",
+    "deploy:cdk": "cdk deploy",
     "format": "prettier --write src server.ts api",
     "lint": "yarn eslint src server.ts api --report-unused-disable-directives --max-warnings 0",
     "postbuild": "chmod +x postbuild.sh && ./postbuild.sh",
@@ -23,11 +25,14 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "aws-cdk-lib": "^2.185.0",
+    "constructs": "^10.4.2",
     "express": "^4.21.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.3.0",
-    "react-tweet": "^3.2.2"
+    "react-tweet": "^3.2.2",
+    "source-map-support": "^0.5.21"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
@@ -37,9 +42,12 @@
     "@types/eslint": "^9.6.1",
     "@types/eslint__js": "^9.14.0",
     "@types/express": "^5.0.0",
+    "@types/node": "^22.13.10",
     "@types/react": "^19.0.11",
     "@types/react-dom": "^19.0.4",
+    "@types/source-map-support": "^0.5.10",
     "@vitejs/plugin-react": "^4.3.4",
+    "aws-cdk": "^2.1005.0",
     "compression": "^1.8.0",
     "dotenv": "^16.4.7",
     "eslint": "9.22.0",

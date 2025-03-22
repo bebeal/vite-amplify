@@ -1,27 +1,29 @@
-import GithubLogo from '../assets/github.svg';
-import AmplifyLogo from '../assets/amplify.svg';
-import NodeLogo from '../assets/node.svg';
-import YarnLogo from '../assets/yarn.svg';
-import ViteLogo from '../assets/vite.svg';
-import ReactLogo from '../assets/react.svg';
-import TypeScriptLogo from '../assets/typescript.svg';
-import ExpressLogo from '../assets/express.svg';
-import ReactRouterLogo from '../assets/react-router.svg';
-import TailwindLogo from '../assets/tailwind.svg';
-import ESLintLogo from '../assets/eslint.svg';
-import PrettierLogo from '../assets/prettier.svg';
-import { Tweet } from './Tweet';
-import { TweetSkeleton } from 'react-tweet';
+import AmplifyLogo from '../assets/icons/amplify.svg';
+import CDKLogo from '../assets/icons/cdk.svg';
+import ESLintLogo from '../assets/icons/eslint.svg';
+import ExpressLogo from '../assets/icons/express.svg';
+import GithubLogo from '../assets/icons/github.svg';
+import NodeLogo from '../assets/icons/node.svg';
+import PrettierLogo from '../assets/icons/prettier.svg';
+import ReactRouterLogo from '../assets/icons/react-router.svg';
+import ReactLogo from '../assets/icons/react.svg';
+import TailwindLogo from '../assets/icons/tailwind.svg';
+import TypeScriptLogo from '../assets/icons/typescript.svg';
+import ViteLogo from '../assets/icons/vite.svg';
+import YarnLogo from '../assets/icons/yarn.svg';
+import { Tweet } from './Tweet/Tweet';
 
 const AnimatedLine = () => <div className='h-1 bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse rounded-full w-full mx-5'></div>;
 
 export const RepoBanner = ({ repo }: { repo: string }) => {
   return (
     <div className='bg-white dark:bg-[#0d1117] text-[#24292f] dark:text-[#c9d1d9] px-4 py-6 rounded-lg shadow-md w-full max-w-2xl mx-auto m-4 border border-[#d0d7de] dark:border-[#30363d]'>
-      <a className='group text-2xl font-bold mb-4 text-center flex items-center justify-center gap-2' href={`https://github.com/${repo}`} target='_blank' rel='noopener noreferrer'>
-        <GithubLogo className='w-5 h-5' />
-        <span className='group-hover:underline'>{repo}</span>
-      </a>
+      <div className="flex justify-center w-full">
+        <a className='group inline-flex items-center gap-2 text-2xl font-bold mb-4 select-none' href={`https://github.com/${repo}`} target='_blank' rel='noopener noreferrer'>
+          <GithubLogo className='w-5 h-5' />
+          <span className='group-hover:underline'>{repo}</span>
+        </a>
+      </div>
       <p className='text-sm text-center mb-4'>Vite template with SSR + Express APIs + Amplify Hosting</p>
       <div className='flex items-center justify-between text-sm mt-4'>
         <a
@@ -81,16 +83,17 @@ export const RepoBanner = ({ repo }: { repo: string }) => {
 
 const FeatureIcons = [
   { Logo: AmplifyLogo, href: 'https://docs.aws.amazon.com/amplify/latest/userguide', label: 'Amplify' },
-  { Logo: NodeLogo, href: 'https://nodejs.org/docs', label: 'Node' },
-  { Logo: YarnLogo, href: 'https://classic.yarnpkg.com/en/docs', label: 'Yarn' },
-  { Logo: ViteLogo, href: 'https://vitejs.dev/guide/', label: 'Vite' },
-  { Logo: ReactLogo, href: 'https://react.dev/reference/react', label: 'React' },
-  { Logo: TypeScriptLogo, href: 'https://www.typescriptlang.org/docs/', label: 'TypeScript' },
-  { Logo: ExpressLogo, href: 'https://expressjs.com/en/4x/api.html', label: 'Express' },
-  { Logo: ReactRouterLogo, href: 'https://reactrouter.com/en/main', label: 'React Router' },
-  { Logo: TailwindLogo, href: 'https://tailwindcss.com/docs', label: 'Tailwind' },
+  { Logo: CDKLogo, href: 'https://docs.aws.amazon.com/cdk/v2/guide/home.html', label: 'CDK' },
   { Logo: ESLintLogo, href: 'https://eslint.org/docs/latest/', label: 'ESLint' },
+  { Logo: ExpressLogo, href: 'https://expressjs.com/en/4x/api.html', label: 'Express' },
+  { Logo: NodeLogo, href: 'https://nodejs.org/docs', label: 'Node' },
   { Logo: PrettierLogo, href: 'https://prettier.io/docs/en/index.html', label: 'Prettier' },
+  { Logo: ReactRouterLogo, href: 'https://reactrouter.com/en/main', label: 'React Router' },
+  { Logo: ReactLogo, href: 'https://react.dev/reference/react', label: 'React' },
+  { Logo: TailwindLogo, href: 'https://tailwindcss.com/docs', label: 'Tailwind' },
+  { Logo: TypeScriptLogo, href: 'https://www.typescriptlang.org/docs/', label: 'TypeScript' },
+  { Logo: ViteLogo, href: 'https://vitejs.dev/guide/', label: 'Vite' },
+  { Logo: YarnLogo, href: 'https://classic.yarnpkg.com/en/docs', label: 'Yarn' },
 ];
 
 export const FeaturesList = () => (
@@ -108,17 +111,14 @@ export const FeaturesList = () => (
 
 const TweetApiDemo = () => (
   <div className='flex w-auto h-auto flex-grow justify-around items-center gap-1 flex-col sm:flex-row'>
-    <div className='h-4/5'>
-      <TweetSkeleton />
-    </div>
     <Tweet id='1775175303284797538' />
   </div>
 );
 
 export const ApiRoutes = () => {
   return (
-    <div className='flex flex-col w-full h-auto sm:justify-between items-center sm:gap-4 sm:flex-row'>
-      <div className='flex w-auto flex-grow justify-center flex-col items-center'>
+    <div className='flex flex-col w-full h-auto sm:justify-between items-center sm:gap-4 sm:flex-row min-h-[460px]'>
+      <div className='flex w-auto h-full flex-grow justify-baseline flex-col items-center py-6 min-w-[50%]'>
         <div className='text-xl font-bold mb-4'>API Routes</div>
         <ul className='list-disc w-auto justify-center'>
           {["api/tweet/:id"].map((route, index) => (
@@ -135,7 +135,7 @@ export const ApiRoutes = () => {
   );
 };
 
-export const Demo = ({ repo }: { repo: string }) => {
+export const DemoPage = ({ repo }: { repo: string }) => {
   return (
     <>
       <RepoBanner repo={repo} />

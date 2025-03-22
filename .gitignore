@@ -47,3 +47,7 @@ dist-ssr
 
 # Amplify build output
 .amplify-hosting
+
+# CDK build output
+cdk.out
+cdk.context.json
