@@ -2,9 +2,9 @@
 
 # Copies the build output to .amplify-hosting in the format amplify expects per https://docs.aws.amazon.com/amplify/latest/userguide/deploy-express-server.html
 
-rm -f node_modules/@swc
-rm -f node_modules/@esbuild
-rm -f node_modules/@eslint
+rm -rf node_modules/@swc
+rm -rf node_modules/@esbuild
+rm -rf node_modules/@eslint
 
 rm -rf ./.amplify-hosting
 
