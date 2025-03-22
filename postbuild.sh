@@ -2,21 +2,21 @@
 
 # Copies the build output to .amplify-hosting in the format amplify expects per https://docs.aws.amazon.com/amplify/latest/userguide/deploy-express-server.html
 
-rm -rf node_modules/@swc
-rm -rf node_modules/@esbuild
-rm -rf node_modules/@eslint
-rm -rf node_modules/@babel
-rm -rf node_modules/@prettier
-rm -rf node_modules/aws-cdk-lib
-rm -rf node_modules/aws-cdk
-rm -rf node_modules/@aws-cdk
-
 rm -rf ./.amplify-hosting
 
 mkdir -p ./.amplify-hosting/compute
 
 cp -r ./dist ./.amplify-hosting/compute/default
 cp -r ./node_modules ./.amplify-hosting/compute/default/node_modules
+
+rm -rf ./.amplify-hosting/compute/default/node_modules/@swc
+rm -rf ./.amplify-hosting/compute/default/node_modules/@esbuild
+rm -rf ./.amplify-hosting/compute/default/node_modules/@eslint
+rm -rf ./.amplify-hosting/compute/default/node_modules/@babel
+rm -rf ./.amplify-hosting/compute/default/node_modules/@prettier
+rm -rf ./.amplify-hosting/compute/default/node_modules/aws-cdk-lib
+rm -rf ./.amplify-hosting/compute/default/node_modules/aws-cdk
+rm -rf ./.amplify-hosting/compute/default/node_modules/@aws-cdk
 
 cp -r public ./.amplify-hosting/static
 
