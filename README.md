@@ -42,17 +42,25 @@ Using yarn
 yarn install      // install dependencies
 ```
 
+<div align="center">
+    <img width="890" alt="425781036-dacb70a0-1228-4cb1-b4a6-8ee62b64aa52" src="https://github.com/user-attachments/assets/e36ed390-d7dd-428a-8938-628da134e88a" />
+</div>
+
 ```bash
 yarn dev          // run the development server
 ```
 
-<img width="896" alt="Screenshot 2025-03-20 at 10 07 31 PM" src="https://github.com/user-attachments/assets/f99e4c4f-24c6-4162-9e46-e3dd675f9dac" />
+<div align="center">
+    <img width="894" alt="425781309-25c7c40e-b8e0-4d4c-9fd7-f565d9bc9eb8" src="https://github.com/user-attachments/assets/b88065b8-a66f-4e9e-b9fc-9b5d823a4120" />
+</div>
 
 ```bash
 yarn build        // build both client side and server side build
 ```
 
-<img width="894" alt="Screenshot 2025-03-20 at 10 08 45 PM" src="https://github.com/user-attachments/assets/2eb9c561-bd5a-411c-9acf-d31074abb794" />
+<div align="center">
+    <img width="894" alt="425345804-2eb9c561-bd5a-411c-9acf-d31074abb794 (1)" src="https://github.com/user-attachments/assets/3f994f23-476b-4ed7-9109-50d40c0495f2" />
+</div>
 
 **Additional Commands**
 
@@ -71,7 +79,9 @@ yarn build:cdk    // build the cdk
 yarn deploy:cdk   // deploy the cdk
 ```
 
-<img width="788" alt="Screenshot 2025-03-21 at 12 46 43 AM" src="https://github.com/user-attachments/assets/ad9d52cc-9046-4cd2-b072-1b47083eb48d" />
+<div align="center">
+    <img width="787" alt="425349353-ad9d52cc-9046-4cd2-b072-1b47083eb48d" src="https://github.com/user-attachments/assets/0ea6d023-35dc-41c6-86c5-84adc5bb19c6" />
+</div>
 
 ## Amplify Hosting
 
@@ -82,7 +92,9 @@ To deploy to Amplify Hosting
 
 **Note:** set env variable `YARN_ENABLE_IMMUTABLE_INSTALLS=0` in the Amplify console
 
-![amplify-deployement](https://github.com/user-attachments/assets/82788a6e-afe4-4b4f-8a46-bbfe0d7cf772)
+<div align="center">
+    <img width="1213" alt="364214191-82788a6e-afe4-4b4f-8a46-bbfe0d7cf772" src="https://github.com/user-attachments/assets/dd1ff536-c916-432b-b1f9-52f21db60e4d" />
+</div>
 
 ## Build
 
