@@ -13,7 +13,8 @@ const serverLog = (...args: unknown[]) => {
   const resetColor = '\x1b[0m'; // Reset color
   const time = new Date().toLocaleTimeString();
   console.log(`${timeColor}${time} ${serverColor}[server]${resetColor}`, ...args);
-}
+};
+
 const __dirname: string = path.dirname(fileURLToPath(import.meta.url));
 const PORT = parseFloat(process.env.PORT || '5137');
 
@@ -59,7 +60,7 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
   app.use('/api', api.router);
   serverLog('API routes:', api.listRoutes());
 
-  const environment = vite?.environments.ssr
+  const environment = vite?.environments.ssr;
   serverLog('Server environment:', environment?.mode, environment?.name);
 
   // serve index.html from parent server for all non-file requests

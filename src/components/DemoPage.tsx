@@ -18,7 +18,7 @@ const AnimatedLine = () => <div className='h-1 bg-gradient-to-r from-blue-500 to
 export const RepoBanner = ({ repo }: { repo: string }) => {
   return (
     <div className='bg-white dark:bg-[#0d1117] text-[#24292f] dark:text-[#c9d1d9] px-4 py-6 rounded-lg shadow-md w-full max-w-2xl mx-auto m-4 border border-[#d0d7de] dark:border-[#30363d]'>
-      <div className="flex justify-center w-full">
+      <div className='flex justify-center w-full'>
         <a className='group inline-flex items-center gap-2 text-2xl font-bold mb-4 select-none' href={`https://github.com/${repo}`} target='_blank' rel='noopener noreferrer'>
           <GithubLogo className='w-5 h-5' />
           <span className='group-hover:underline'>{repo}</span>
@@ -121,7 +121,7 @@ export const ApiRoutes = () => {
       <div className='flex w-auto h-full flex-grow justify-baseline flex-col items-center py-6 min-w-[50%]'>
         <div className='text-xl font-bold mb-4'>API Routes</div>
         <ul className='list-disc w-auto justify-center'>
-          {["api/tweet/:id"].map((route, index) => (
+          {['api/tweet/:id'].map((route, index) => (
             <li key={index}>
               <a href={route.replace(':id', '1810310734091571240')} className='text-blue-400 hover:underline'>
                 {route}

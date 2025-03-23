@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div className='w-full h-screen flex flex-col transition-all duration-300 overflow-auto'>
       <ThemeToggle />
-      <DemoPage repo="bebeal/vite-amplify" />
+      <DemoPage repo='bebeal/vite-amplify' />
     </div>
   );
 };

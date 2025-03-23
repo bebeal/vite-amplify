@@ -40,17 +40,17 @@ export const ThemeToggle = () => {
         onMouseLeave={() => setShowTooltip(false)}
       >
         <div
-          className="appearance-none border border-[currentColor] rounded-[1.9rem] h-[1.25rem] min-w-[2.25rem] cursor-pointer"
+          className='appearance-none border border-[currentColor] rounded-[1.9rem] h-[1.25rem] min-w-[2.25rem] cursor-pointer'
           style={{
             background: resolvedTheme === 'light' ? '#0d1117' : '#e1e4e8',
             boxShadow: getBoxShadow(theme, resolvedTheme),
-            transition: 'box-shadow 300ms cubic-bezier(0.34, 1.56, 0.64, 1)'
+            transition: 'box-shadow 300ms cubic-bezier(0.34, 1.56, 0.64, 1)',
           }}
         >
           {/* Tooltip */}
           {showTooltip && (
             <div
-              className="absolute text-xs whitespace-nowrap transform -translate-x-1/2 pointer-events-none select-none"
+              className='absolute text-xs whitespace-nowrap transform -translate-x-1/2 pointer-events-none select-none'
               style={{
                 top: '100%',
                 left: theme === 'light' ? '10%' : theme === 'system' ? '50%' : '90%',
@@ -62,32 +62,32 @@ export const ThemeToggle = () => {
                 marginTop: '5px',
                 transition: 'left 300ms cubic-bezier(0.34, 1.56, 0.64, 1)',
                 border: resolvedTheme === 'dark' ? '1px solid #30363d' : '1px solid #d0d7de',
-                boxShadow: '0 1px 0 rgba(0,0,0,0.1)'
+                boxShadow: '0 1px 0 rgba(0,0,0,0.1)',
               }}
             >
               {theme || 'system'}
               {/* Arrow */}
               <div
-                className="absolute w-0 h-0"
+                className='absolute w-0 h-0'
                 style={{
                   top: '-4px',
                   left: '50%',
                   marginLeft: '-4px',
                   borderLeft: '4px solid transparent',
                   borderRight: '4px solid transparent',
-                  borderBottom: resolvedTheme === 'dark' ? '4px solid #30363d' : '4px solid #d0d7de'
+                  borderBottom: resolvedTheme === 'dark' ? '4px solid #30363d' : '4px solid #d0d7de',
                 }}
               />
               {/* Inner arrow for border effect */}
               <div
-                className="absolute w-0 h-0"
+                className='absolute w-0 h-0'
                 style={{
                   top: '-3px',
                   left: '50%',
                   marginLeft: '-3px',
                   borderLeft: '3px solid transparent',
                   borderRight: '3px solid transparent',
-                  borderBottom: resolvedTheme === 'dark' ? '3px solid #0d1117' : '3px solid white'
+                  borderBottom: resolvedTheme === 'dark' ? '3px solid #0d1117' : '3px solid white',
                 }}
               />
             </div>
