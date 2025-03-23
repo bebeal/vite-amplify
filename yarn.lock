@@ -243,6 +243,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bebeal/console-prefix-plugin@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@bebeal/console-prefix-plugin@npm:0.1.3"
+  peerDependencies:
+    vite: ^6.2.2
+  checksum: 10c0/56f51ee26d850bf4fd93ad3ed47328fe8771ffdb49ec21ce8036f1adff0fed991de6ccc5a1e62bf5762514dceac6f6b7e4dd1a644a9c8189099b0864f5eba994
+  languageName: node
+  linkType: hard
+
 "@esbuild/aix-ppc64@npm:0.25.1":
   version: 0.25.1
   resolution: "@esbuild/aix-ppc64@npm:0.25.1"
@@ -4762,6 +4771,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vite-amplify@workspace:."
   dependencies:
+    "@bebeal/console-prefix-plugin": "npm:^0.1.3"
     "@eslint/js": "npm:^9.22.0"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.0.14"

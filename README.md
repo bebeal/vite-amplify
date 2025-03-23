@@ -104,10 +104,10 @@ The build outputs to `dist` folder. The build is split into two parts, the clien
 dist
 ├── client
 │   ├── assets
-│   │   ├── index-DY63Vhwi.css       28.21 kB │ gzip:     6.29 kB
-│   │   └── index-Dxa5nZum.js       326.88 kB │ gzip:   109.05 kB
+│   │   ├── index-CjfxHUYp.css       28.14 kB │ gzip:     6.28 kB
+│   │   └── index-CyAzpqo0.js       326.88 kB │ gzip:   109.05 kB
 │   ├── favicon.ico                  14.73 kB │ gzip:     4.46 kB
-│   ├── index.html                     .56 kB │ gzip:      .36 kB
+│   ├── index.html                     .56 kB │ gzip:      .35 kB
 │   └── robots.txt                     .06 kB │ gzip:      .08 kB
 └── server
     ├── api
@@ -115,17 +115,14 @@ dist
     │   └── api.js                    1.01 kB │ gzip:      .47 kB
     ├── entry-server.js              56.77 kB │ gzip:    20.72 kB
     ├── favicon.ico                  14.73 kB │ gzip:     4.46 kB
-    ├── plugins
-    │   ├── console-prefix.d.ts        .19 kB │ gzip:      .17 kB
-    │   └── console-prefix.js          .89 kB │ gzip:      .40 kB
     ├── robots.txt                     .06 kB │ gzip:      .08 kB
     ├── server.d.ts                    .25 kB │ gzip:      .18 kB
     ├── server.js                     4.52 kB │ gzip:     1.84 kB
-    ├── tsconfig.node.tsbuildinfo    47.02 kB │ gzip:    14.94 kB
+    ├── tsconfig.node.tsbuildinfo    46.99 kB │ gzip:    14.90 kB
     ├── vite.config.d.ts               .08 kB │ gzip:      .10 kB
-    └── vite.config.js                1.34 kB │ gzip:      .50 kB
+    └── vite.config.js                1.39 kB │ gzip:      .52 kB
 
-6 directories, 17 files
+5 directories, 15 files
 ```
 
 ## Amplify Build
@@ -142,33 +139,30 @@ dist
 │   └── default
 │       ├── client
 │       │   ├── assets
-│       │   │   ├── index-DY63Vhwi.css          28.21 kB │ gzip:     6.29 kB
-│       │   │   └── index-Dxa5nZum.js          326.88 kB │ gzip:   109.05 kB
+│       │   │   ├── index-CjfxHUYp.css          28.14 kB │ gzip:     6.28 kB
+│       │   │   └── index-CyAzpqo0.js          326.88 kB │ gzip:   109.05 kB
 │       │   ├── favicon.ico                     14.73 kB │ gzip:     4.46 kB
-│       │   ├── index.html                        .56 kB │ gzip:      .36 kB
+│       │   ├── index.html                        .56 kB │ gzip:      .35 kB
 │       │   └── robots.txt                        .06 kB │ gzip:      .08 kB
-│       ├── package.json                         2.17 kB │ gzip:      .88 kB
+│       ├── package.json                         2.22 kB │ gzip:      .90 kB
 │       └── server
 │           ├── api
 │           │   ├── api.d.ts                      .21 kB │ gzip:      .16 kB
 │           │   └── api.js                       1.01 kB │ gzip:      .47 kB
 │           ├── entry-server.js                 56.77 kB │ gzip:    20.72 kB
 │           ├── favicon.ico                     14.73 kB │ gzip:     4.46 kB
-│           ├── plugins
-│           │   ├── console-prefix.d.ts           .19 kB │ gzip:      .17 kB
-│           │   └── console-prefix.js             .89 kB │ gzip:      .40 kB
 │           ├── robots.txt                        .06 kB │ gzip:      .08 kB
 │           ├── server.d.ts                       .25 kB │ gzip:      .18 kB
 │           ├── server.js                        4.52 kB │ gzip:     1.84 kB
-│           ├── tsconfig.node.tsbuildinfo       47.02 kB │ gzip:    14.94 kB
+│           ├── tsconfig.node.tsbuildinfo       46.99 kB │ gzip:    14.90 kB
 │           ├── vite.config.d.ts                  .08 kB │ gzip:      .10 kB
-│           └── vite.config.js                   1.34 kB │ gzip:      .50 kB
+│           └── vite.config.js                   1.39 kB │ gzip:      .52 kB
 ├── deploy-manifest.json                          .83 kB │ gzip:      .33 kB
 └── static
     ├── favicon.ico                             14.73 kB │ gzip:     4.46 kB
     └── robots.txt                                .06 kB │ gzip:      .08 kB
 
-9 directories, 21 files
+8 directories, 19 files
 ```
 
 ## Lighthouse

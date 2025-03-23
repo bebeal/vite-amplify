@@ -9,6 +9,7 @@ mkdir -p ./.amplify-hosting/compute
 cp -r ./dist ./.amplify-hosting/compute/default
 cp -r ./node_modules ./.amplify-hosting/compute/default/node_modules
 
+# Amplify recommendation https://docs.aws.amazon.com/amplify/latest/userguide/troubleshooting-SSR.html#build-output-too-large
 rm -rf ./.amplify-hosting/compute/default/node_modules/@swc
 rm -rf ./.amplify-hosting/compute/default/node_modules/@esbuild
 rm -rf ./.amplify-hosting/compute/default/node_modules/@eslint
