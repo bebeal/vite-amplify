@@ -1,3 +1,4 @@
+@import './assets/fonts/BerkeleyMono.css';
 /* import tailwindcss base styles: https://tailwindcss.com/docs/installation/using-vite */
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
@@ -5,7 +6,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Berkeley Mono', monospace;
   line-height: 1;
   font-weight: 400;
 

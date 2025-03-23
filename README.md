@@ -11,6 +11,8 @@ Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 
 ![vite-amplify-landing](https://github.com/user-attachments/assets/5d5973f0-3002-4b2b-b5d1-001e4a705a6c)
 
+> **Note:** This template uses Berkeley Mono (now known as US Graphics) font, which is a paid font. You'll need to purchase a license from [US Graphics](https://usgraphics.com) to use it in your project.
+
 ## Features
 
 * [Node](https://nodejs.org/docs)
