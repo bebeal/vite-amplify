@@ -24,7 +24,6 @@ Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 * [Eslint](https://eslint.org/docs/latest/)
 * [Prettier](https://prettier.io/docs/en/)
 * [Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide)
-* [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
 
 ## Other Libraries
 
@@ -71,17 +70,6 @@ yarn build:server // build the server side to dist/server
 yarn lint         // run eslint
 yarn format       // run prettier
 ```
-
-## CDK
-
-```bash
-yarn build:cdk    // build the cdk
-yarn deploy:cdk   // deploy the cdk
-```
-
-<div align="center">
-    <img width="787" alt="425349353-ad9d52cc-9046-4cd2-b072-1b47083eb48d" src="https://github.com/user-attachments/assets/0ea6d023-35dc-41c6-86c5-84adc5bb19c6" />
-</div>
 
 ## Amplify Hosting
 

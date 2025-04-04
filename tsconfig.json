@@ -6,9 +6,6 @@
     },
     {
       "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "cdk/tsconfig.cdk.json"
     }
   ]
 }

@@ -1,5 +1,4 @@
 import AmplifyLogo from '../assets/icons/amplify.svg';
-import CDKLogo from '../assets/icons/cdk.svg';
 import ESLintLogo from '../assets/icons/eslint.svg';
 import ExpressLogo from '../assets/icons/express.svg';
 import GithubLogo from '../assets/icons/github.svg';
@@ -83,7 +82,6 @@ export const RepoBanner = ({ repo }: { repo: string }) => {
 
 const FeatureIcons = [
   { Logo: AmplifyLogo, href: 'https://docs.aws.amazon.com/amplify/latest/userguide', label: 'Amplify' },
-  { Logo: CDKLogo, href: 'https://docs.aws.amazon.com/cdk/v2/guide/home.html', label: 'CDK' },
   { Logo: ESLintLogo, href: 'https://eslint.org/docs/latest/', label: 'ESLint' },
   { Logo: ExpressLogo, href: 'https://expressjs.com/en/4x/api.html', label: 'Express' },
   { Logo: NodeLogo, href: 'https://nodejs.org/docs', label: 'Node' },

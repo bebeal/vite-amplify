@@ -1,3 +1,0 @@
-{
-  "app": "CDK_OUTDIR=cdk.out tsx cdk/cdk.ts"
-}

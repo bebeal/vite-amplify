@@ -7,6 +7,6 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ["node_modules", "dist", ".amplify-hosting", "assets", "cdk", "cdk.out"],
+    ignores: ["node_modules", "dist", ".amplify-hosting", "assets"],
   }
 );

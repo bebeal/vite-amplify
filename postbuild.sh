@@ -15,9 +15,6 @@ rm -rf ./.amplify-hosting/compute/default/node_modules/@esbuild
 rm -rf ./.amplify-hosting/compute/default/node_modules/@eslint
 rm -rf ./.amplify-hosting/compute/default/node_modules/@babel
 rm -rf ./.amplify-hosting/compute/default/node_modules/@prettier
-rm -rf ./.amplify-hosting/compute/default/node_modules/aws-cdk-lib
-rm -rf ./.amplify-hosting/compute/default/node_modules/aws-cdk
-rm -rf ./.amplify-hosting/compute/default/node_modules/@aws-cdk
 
 cp -r public ./.amplify-hosting/static
 
