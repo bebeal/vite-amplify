@@ -6,12 +6,12 @@ Vite Template with Express APIs + Amplify Hosting.
 
 Note: This branch has no SSR. It retains the express api server but removes the actual server side rendering -> client side hydration.
 
-<a href="https://vite-amplify.com" rel="noopener noreferrer" target="_blank">vite-amplify.com</a>
+<a href="vite-amplify-no-ssr.com" rel="noopener noreferrer" target="_blank">vite-amplify-no-ssr.com</a>
 
 <a href="https://www.youtube.com/watch?v=dsHQUgwkZ7s" rel="noopener noreferrer" target="_blank">~4 mins from fork-to-finish for a successful deployment</a>
 </div>
 
-![vite-amplify-landing](https://github.com/user-attachments/assets/5d5973f0-3002-4b2b-b5d1-001e4a705a6c)
+![vite-amplify-landing](https://github.com/user-attachments/assets/5ebbf932-8528-428a-a820-397d3f7202ce)
 
 ## Features
 
@@ -83,7 +83,7 @@ To deploy to Amplify Hosting
 **Note:** set env variable `YARN_ENABLE_IMMUTABLE_INSTALLS=0` in the Amplify console
 
 <div align="center">
-    <img width="1213" alt="364214191-82788a6e-afe4-4b4f-8a46-bbfe0d7cf772" src="https://github.com/user-attachments/assets/dd1ff536-c916-432b-b1f9-52f21db60e4d" />
+   <img width="1365" alt="Screenshot 2025-04-04 at 8 02 19 PM" src="https://github.com/user-attachments/assets/dfcf95a0-b32a-44cf-bb05-db63d5732131" />
 </div>
 
 ## Build
