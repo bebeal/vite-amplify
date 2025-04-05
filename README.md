@@ -2,7 +2,7 @@
 
 # vite-amplify **(no-ssr)**
 
-Vite template with Express APIs + Amplify Hosting.
+Vite Template with Express APIs + Amplify Hosting.
 
 Note: This branch has no SSR. It retains the express api server but removes the actual server side rendering -> client side hydration.
 
