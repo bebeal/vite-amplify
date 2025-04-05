@@ -44,7 +44,7 @@ yarn install      // install dependencies
 ```
 
 <div align="center">
-    <img width="894" alt="Image" src="https://github.com/user-attachments/assets/cb4a41a1-130f-4095-a030-4e9769862c5e" />
+    <img width="894" alt="Image" src="https://github.com/user-attachments/assets/91198d38-af82-4267-8765-c34cf6e5903b" />
 </div>
 
 ```bash
@@ -52,7 +52,7 @@ yarn dev          // run the development server
 ```
 
 <div align="center">
-    <img width="894" alt="Image" src="https://github.com/user-attachments/assets/3cf1edc5-7eb9-4b7d-a8d4-039d0dd833ea" />
+    <img width="894" alt="Image" src="https://github.com/user-attachments/assets/cb4a41a1-130f-4095-a030-4e9769862c5e" />
 </div>
 
 ```bash
@@ -60,7 +60,7 @@ yarn build        // build both client side and server side build
 ```
 
 <div align="center">
-   <img width="894" alt="Image" src="https://github.com/user-attachments/assets/91198d38-af82-4267-8765-c34cf6e5903b" />
+    <img width="894" alt="Image" src="https://github.com/user-attachments/assets/3cf1edc5-7eb9-4b7d-a8d4-039d0dd833ea" />
 </div>
 
 **Additional Commands**
