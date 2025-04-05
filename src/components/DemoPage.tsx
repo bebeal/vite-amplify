@@ -24,7 +24,7 @@ export const RepoBanner = ({ repo }: { repo: string }) => {
           <span className='group-hover:underline'>{repo}</span>
         </a>
       </div>
-      <p className='text-sm text-center mb-4'>Vite template with SSR + Express APIs + Amplify Hosting</p>
+      <p className='text-sm text-center mb-4'>Vite Template with SSR + Express APIs + Amplify Hosting</p>
       <div className='flex items-center justify-between text-sm mt-4'>
         <a
           href='https://github.com/new?template_name=vite-amplify&template_owner=bebeal&name=vite-amplify-deploy'

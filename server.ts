@@ -6,6 +6,9 @@ import { fileURLToPath } from 'url';
 import { isRunnableDevEnvironment, ViteDevServer } from 'vite';
 import api from './api/api.js';
 
+const __dirname: string = path.dirname(fileURLToPath(import.meta.url));
+const PORT = parseFloat(process.env.PORT || '5137');
+
 // Server log function that adds timestamp
 const serverLog = (...args: unknown[]) => {
   const timeColor = '\x1b[90m'; // Gray color code
@@ -14,9 +17,6 @@ const serverLog = (...args: unknown[]) => {
   const time = new Date().toLocaleTimeString();
   console.log(`${timeColor}${time} ${serverColor}[server]${resetColor}`, ...args);
 };
-
-const __dirname: string = path.dirname(fileURLToPath(import.meta.url));
-const PORT = parseFloat(process.env.PORT || '5137');
 
 export const createServer = async (root = process.cwd(), env = process.env.NODE_ENV): Promise<{ expressServer: express.Express; viteServer: ViteDevServer | null }> => {
   const isProd = env === 'production';

@@ -2,7 +2,7 @@
 
 # vite-amplify
 
-Template with Vite SSR + Express APIs + AWS Amplify Hosting.
+Vite Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 
 <a href="https://vite-amplify.com" rel="noopener noreferrer" target="_blank">vite-amplify.com</a>
 
@@ -43,7 +43,7 @@ yarn install      // install dependencies
 ```
 
 <div align="center">
-    <img width="890" alt="425781036-dacb70a0-1228-4cb1-b4a6-8ee62b64aa52" src="https://github.com/user-attachments/assets/e36ed390-d7dd-428a-8938-628da134e88a" />
+    <img width="894" alt="425781036-dacb70a0-1228-4cb1-b4a6-8ee62b64aa52" src="https://github.com/user-attachments/assets/e36ed390-d7dd-428a-8938-628da134e88a" />
 </div>
 
 ```bash
@@ -93,7 +93,7 @@ To deploy to Amplify Hosting
 **Note:** set env variable `YARN_ENABLE_IMMUTABLE_INSTALLS=0` in the Amplify console
 
 <div align="center">
-    <img width="1213" alt="364214191-82788a6e-afe4-4b4f-8a46-bbfe0d7cf772" src="https://github.com/user-attachments/assets/dd1ff536-c916-432b-b1f9-52f21db60e4d" />
+    <img width="1365" alt="Image" src="https://github.com/user-attachments/assets/58f6b7b7-fa08-4288-87f1-953678985910" />
 </div>
 
 ## Build
