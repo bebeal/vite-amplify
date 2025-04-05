@@ -4,9 +4,12 @@
 
 Vite Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 
-<a href="https://vite-amplify.com" rel="noopener noreferrer" target="_blank">vite-amplify.com</a>
+<small style="font-size:0.9em">Also available with no server side rendering:  
+<a href="https://github.com/bebeal/vite-amplify/tree/no-ssr">
+<img src="https://img.shields.io/badge/-no--ssr%20branch-ffffff?logo=github&style=flat&logoColor=000000" style="height:14px; vertical-align:middle">
+</a></small> (<a href="https://vite-amplify-no-ssr.com">vite-amplify-no-ssr.com</a>)
 
-<small style="font-size:0.9em">Also available with no server side rendering:  <a href="https://github.com/bebeal/vite-amplify/tree/no-ssr"><img src="https://icongr.am/octicons/mark-github.svg?size=14" alt="GitHub" style="vertical-align: middle"> no-ssr branch</a></small> (<a href="https://vite-amplify-no-ssr.com" rel="noopener noreferrer" target="_blank">vite-amplify-no-ssr.com</a>)
+<a href="https://vite-amplify.com" rel="noopener noreferrer" target="_blank">vite-amplify.com</a>
 
 <a href="https://www.youtube.com/watch?v=dsHQUgwkZ7s" rel="noopener noreferrer" target="_blank">~4 mins from fork-to-finish for a successful deployment</a>
 </div>
