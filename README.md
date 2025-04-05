@@ -9,7 +9,8 @@ Vite Template with Vite SSR + Express APIs + AWS Amplify Hosting.
 <a href="https://www.youtube.com/watch?v=dsHQUgwkZ7s" rel="noopener noreferrer" target="_blank">~4 mins from fork-to-finish for a successful deployment</a>
 </div>
 
-![vite-amplify-landing](https://github.com/user-attachments/assets/5d5973f0-3002-4b2b-b5d1-001e4a705a6c)
+![vite-amplify-landing](https://github.com/user-attachments/assets/7dc6d026-5c3a-44d2-b58e-ad6a35d87c21)
+
 
 ## Features
 
