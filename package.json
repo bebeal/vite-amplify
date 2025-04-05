@@ -46,7 +46,7 @@
     "@types/source-map-support": "^0.5.10",
     "@vitejs/plugin-react": "^4.3.4",
     "aws-cdk": "^2.1005.0",
-    "aws-cdk-lib": "^2.185.0",
+    "aws-cdk-lib": "^2.187.0",
     "compression": "^1.8.0",
     "constructs": "^10.4.2",
     "dotenv": "^16.4.7",

@@ -15,10 +15,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-cdk/asset-awscli-v1@npm:^2.2.227":
-  version: 2.2.228
-  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.228"
-  checksum: 10c0/b52974cb3f3482f31e152ec74058f7642607da3f9ad40c8ab459600ef1c4cbcbbc21d0ee3f6b4c0bc3aeaecfca21998d99de355056bb76ad281d58239cc11d68
+"@aws-cdk/asset-awscli-v1@npm:^2.2.229":
+  version: 2.2.230
+  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.230"
+  checksum: 10c0/4a43bdaffaabed33f4fba2cca46dfea6dac22e8379b61f15c6d5f2560b54eb5c2b10da123c0bf328292998cd5dc1dcab69a8599a064299384e69d5f8f39afd33
   languageName: node
   linkType: hard
 
@@ -29,13 +29,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-cdk/cloud-assembly-schema@npm:^40.7.0":
-  version: 40.7.0
-  resolution: "@aws-cdk/cloud-assembly-schema@npm:40.7.0"
+"@aws-cdk/cloud-assembly-schema@npm:^41.0.0":
+  version: 41.2.0
+  resolution: "@aws-cdk/cloud-assembly-schema@npm:41.2.0"
   dependencies:
     jsonschema: "npm:~1.4.1"
     semver: "npm:^7.7.1"
-  checksum: 10c0/d7bac318e1cb215119d903b885aa3b2cfd1757b1ed6c7b065a873cd0b2e47b66447dd7713a07611a6dfd8f3f3781ec2ce2802c763e7bef1adb99730ea098b4b7
+  checksum: 10c0/b62e580878d7f969f32a74982c6f449372538368180e017312948bd727b53f2c3e909f232b2238cac94190a12cfa098ecbdebeddf29b8119e5a794a9b1754793
   languageName: node
   linkType: hard
 
@@ -1593,13 +1593,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-cdk-lib@npm:^2.185.0":
-  version: 2.185.0
-  resolution: "aws-cdk-lib@npm:2.185.0"
+"aws-cdk-lib@npm:^2.187.0":
+  version: 2.188.0
+  resolution: "aws-cdk-lib@npm:2.188.0"
   dependencies:
-    "@aws-cdk/asset-awscli-v1": "npm:^2.2.227"
+    "@aws-cdk/asset-awscli-v1": "npm:^2.2.229"
     "@aws-cdk/asset-node-proxy-agent-v6": "npm:^2.1.0"
-    "@aws-cdk/cloud-assembly-schema": "npm:^40.7.0"
+    "@aws-cdk/cloud-assembly-schema": "npm:^41.0.0"
     "@balena/dockerignore": "npm:^1.0.2"
     case: "npm:1.6.3"
     fs-extra: "npm:^11.3.0"
@@ -1613,7 +1613,7 @@ __metadata:
     yaml: "npm:1.10.2"
   peerDependencies:
     constructs: ^10.0.0
-  checksum: 10c0/01970645cf32de38e8d3dca247e971fe18f7b6f2498bb707102d16cddd4e27ace110b08f5159d3bfe9277952f6799cb1be55d59cebce47262119cdcdb59fe5e2
+  checksum: 10c0/92d477f527f0a8cf1892ab587a90678a93d3de5b1224e4609451d569ee4f425ecd4b9b662cc8ea863b4edc03cdf0ff5bc442ab7e699a914ca89ea0a43a43ec35
   languageName: node
   linkType: hard
 
@@ -4660,11 +4660,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.8.2#optional!builtin<compat/typescript>":
   version: 5.8.2
-  resolution: "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=379a07"
+  resolution: "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/8a6cd29dfb59bd5a978407b93ae0edb530ee9376a5b95a42ad057a6f80ffb0c410489ccd6fe48d1d0dfad6e8adf5d62d3874bbd251f488ae30e11a1ce6dabd28
+  checksum: 10c0/5448a08e595cc558ab321e49d4cac64fb43d1fa106584f6ff9a8d8e592111b373a995a1d5c7f3046211c8a37201eb6d0f1566f15cdb7a62a5e3be01d087848e2
   languageName: node
   linkType: hard
 
@@ -4785,7 +4785,7 @@ __metadata:
     "@types/source-map-support": "npm:^0.5.10"
     "@vitejs/plugin-react": "npm:^4.3.4"
     aws-cdk: "npm:^2.1005.0"
-    aws-cdk-lib: "npm:^2.185.0"
+    aws-cdk-lib: "npm:^2.187.0"
     compression: "npm:^1.8.0"
     constructs: "npm:^10.4.2"
     dotenv: "npm:^16.4.7"
