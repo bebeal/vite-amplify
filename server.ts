@@ -1,10 +1,12 @@
 import 'dotenv/config';
 import express from 'express';
-import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { isRunnableDevEnvironment, ViteDevServer } from 'vite';
+import { ViteDevServer } from 'vite';
 import api from './api/api.js';
+
+const __dirname: string = path.dirname(fileURLToPath(import.meta.url));
+const PORT = parseFloat(process.env.PORT || '5137');
 
 // Server log function that adds timestamp
 const serverLog = (...args: unknown[]) => {
@@ -15,8 +17,40 @@ const serverLog = (...args: unknown[]) => {
   console.log(`${timeColor}${time} ${serverColor}[server]${resetColor}`, ...args);
 };
 
-const __dirname: string = path.dirname(fileURLToPath(import.meta.url));
-const PORT = parseFloat(process.env.PORT || '5137');
+const createFetchRequest = (req: express.Request, res: express.Response, next: () => void) => {
+    const origin = `${req.protocol}://${req.get('host')}`;
+    // Note: This had to take originalUrl into account for presumably vite's proxying
+    const url = new URL(req.originalUrl || req.url, origin);
+
+    const controller = new AbortController();
+    req.on('close', () => controller.abort());
+
+    const headers = new Headers();
+
+    for (const [key, values] of Object.entries(req.headers)) {
+      if (values) {
+        if (Array.isArray(values)) {
+          for (const value of values) {
+            headers.append(key, value);
+          }
+        } else {
+          headers.set(key, values);
+        }
+      }
+    }
+
+    const init: RequestInit = {
+      method: req.method,
+      headers,
+      signal: controller.signal,
+    };
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      init.body = req.body;
+    }
+    res.locals.fetchRequest = new Request(url.href, init);
+
+    next();
+  };
 
 export const createServer = async (root = process.cwd(), env = process.env.NODE_ENV): Promise<{ expressServer: express.Express; viteServer: ViteDevServer | null }> => {
   const isProd = env === 'production';
@@ -24,25 +58,23 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
 
   // Configure the server
   const app = express();
+  // inject api router
+  app.use('/api',
+    createFetchRequest,
+    api.router,
+  );
+  serverLog('API routes:', api.listRoutes());
+
   let vite: ViteDevServer | null = null;
   if (!isProd) {
-    // Create Vite server and set 'custom' app type to disable Vite's own HTML serving logic
+    // Create Vite server and set 'spa' app type ()
     vite = await (
       await import('vite')
     ).createServer({
       root,
       logLevel: isTest ? 'error' : 'info',
       server: { middlewareMode: true, port: PORT },
-      appType: 'custom',
-      environments: {
-        ssr: {
-          // by default, modules are run in the same process as the vite server
-        },
-      },
-      build: { minify: true, ssr: true },
-      ssr: {
-        noExternal: ['react-tweet'],
-      },
+      appType: 'spa',
     });
     // Use vite's connect instance as middleware (remains valid after restarts)
     app.use(vite.middlewares);
@@ -56,44 +88,9 @@ export const createServer = async (root = process.cwd(), env = process.env.NODE_
     );
   }
 
-  // inject api router
-  app.use('/api', api.router);
-  serverLog('API routes:', api.listRoutes());
-
-  const environment = vite?.environments.ssr;
-  serverLog('Server environment:', environment?.mode, environment?.name);
-
-  // serve index.html from parent server for all non-file requests
-  app.use('*', async (req, res, next) => {
-    try {
-      const url = req.originalUrl;
-      // 1. Read index.html
-      let template = fs.readFileSync(path.resolve(__dirname, !isProd ? 'index.html' : '../client/index.html'), 'utf-8');
-      // 2. Run transforms on the template. This injects the Vite HMR client, and global preambles from plugins like @vitejs/plugin-react
-      template = (await vite?.transformIndexHtml(url, template)) || template;
-      // 3. Load the server entry
-      let render;
-      if (!isProd && environment && isRunnableDevEnvironment(environment)) {
-        // 3. Load the server entry. import(url) automatically transforms ESM source code to be usable in Node.js
-        render = (await environment.runner.import('/src/entry-server.tsx')).default.render;
-      } else {
-        // @ts-expect-error: will only exists in production
-        render = (await import('./entry-server.js')).default.render;
-      }
-      // 4. render the app HTML. This assumes entry-server.js's exported `render` function calls appropriate framework SSR APIs, e.g. ReactDOMServer.renderToString()
-      const appHtml = await render(req);
-      // 5. Inject the app-rendered HTML into the template, heres where we use the ssr placeholder in the html
-      const html = template.replace('<!--ssr-outlet-->', appHtml.html);
-      // 6. Send the rendered HTML back.
-      res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
-    } catch (e: unknown) {
-      const error = e as Error;
-      // let Vite fix the stack trace so it maps back to your actual source code.
-      if (!isProd && vite) {
-        vite.ssrFixStacktrace(error);
-      }
-      next(e);
-    }
+  // serve client side index.html
+  app.use('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, !isProd ? 'index.html' : '../client/index.html'));
   });
 
   return { expressServer: app, viteServer: vite };

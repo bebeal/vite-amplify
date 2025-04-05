@@ -1,4 +1,4 @@
-// entry-client: hydrates the app using the framework's client-side API: ReactDom.hydrateRoot in this case
+// entry-client: creates the client side root using the framework's client-side API: ReactDom.createRoot in this case
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router';
 import routes from './routes';
@@ -7,4 +7,4 @@ import './index.css';
 
 const router = createBrowserRouter(routes);
 
-ReactDOM.hydrateRoot(document.getElementById('root') as HTMLElement, <RouterProvider router={router} />);
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(<RouterProvider router={router} />);

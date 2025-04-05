@@ -20,10 +20,10 @@ export const RepoBanner = ({ repo }: { repo: string }) => {
       <div className='flex justify-center w-full'>
         <a className='group inline-flex items-center gap-2 text-2xl font-bold mb-4 select-none' href={`https://github.com/${repo}`} target='_blank' rel='noopener noreferrer'>
           <GithubLogo className='w-5 h-5' />
-          <span className='group-hover:underline'>{repo}</span>
+          <span className='group-hover:underline'>{repo} <span className="font-bold">(no-ssr)</span></span>
         </a>
       </div>
-      <p className='text-sm text-center mb-4'>Vite template with SSR + Express APIs + Amplify Hosting</p>
+      <p className='text-sm text-center mb-4'>Vite template with Express APIs + Amplify Hosting</p>
       <div className='flex items-center justify-between text-sm mt-4'>
         <a
           href='https://github.com/new?template_name=vite-amplify&template_owner=bebeal&name=vite-amplify-deploy'

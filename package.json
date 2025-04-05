@@ -13,7 +13,7 @@
   "scripts": {
     "build": "yarn build:client && yarn build:server && yarn postbuild",
     "build:client": "tsc && vite build",
-    "build:server": "tsc -p tsconfig.node.json && vite build --ssr src/entry-server.tsx",
+    "build:server": "tsc -p tsconfig.node.json ",
     "clean": "rimraf dist node_modules yarn.lock .amplify-hosting",
     "dev": "nodemon --watch server --exec tsx server",
     "format": "prettier --write src server.ts api",
@@ -65,5 +65,5 @@
     "yarn": ">=4",
     "npm": ">=9"
   },
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@4.8.1"
 }
