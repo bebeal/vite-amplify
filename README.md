@@ -6,7 +6,7 @@ Vite Template with Express APIs + Amplify Hosting.
 
 Note: This branch has no SSR. It retains the express api server but removes the actual server side rendering -> client side hydration.
 
-<a href="vite-amplify-no-ssr.com" rel="noopener noreferrer" target="_blank">vite-amplify-no-ssr.com</a>
+<a href="https://www.vite-amplify-no-ssr.com" rel="noopener noreferrer" target="_blank">vite-amplify-no-ssr.com</a>
 
 <a href="https://www.youtube.com/watch?v=dsHQUgwkZ7s" rel="noopener noreferrer" target="_blank">~4 mins from fork-to-finish for a successful deployment</a>
 </div>
