@@ -4,12 +4,8 @@
 /* dark theme to be driven by a CSS selector */
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-  --font-mono: 'Berkeley Mono', monospace;
-}
-
 :root {
-  @apply font-mono leading-none font-normal scheme-light-dark antialiased;
+  @apply leading-none font-normal scheme-light-dark antialiased;
   text-rendering: optimizeLegibility;
 }
 
