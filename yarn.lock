@@ -1602,9 +1602,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-cdk-lib@npm:^2.188.0":
-  version: 2.188.0
-  resolution: "aws-cdk-lib@npm:2.188.0"
+"aws-cdk-lib@npm:^2.189.0":
+  version: 2.189.0
+  resolution: "aws-cdk-lib@npm:2.189.0"
   dependencies:
     "@aws-cdk/asset-awscli-v1": "npm:^2.2.229"
     "@aws-cdk/asset-node-proxy-agent-v6": "npm:^2.1.0"
@@ -1622,7 +1622,7 @@ __metadata:
     yaml: "npm:1.10.2"
   peerDependencies:
     constructs: ^10.0.0
-  checksum: 10c0/92d477f527f0a8cf1892ab587a90678a93d3de5b1224e4609451d569ee4f425ecd4b9b662cc8ea863b4edc03cdf0ff5bc442ab7e699a914ca89ea0a43a43ec35
+  checksum: 10c0/842d24cf7c25f3ce5b89bb7d2a6a648f9db2a0de6da8331e192a5ad5e60278be3a8941b1d6a6b8da45123ec9254c861f713ad28603c56988659ad807d4610706
   languageName: node
   linkType: hard
 
@@ -4801,7 +4801,7 @@ __metadata:
     "@types/source-map-support": "npm:^0.5.10"
     "@vitejs/plugin-react": "npm:^4.3.4"
     aws-cdk: "npm:^2.1007.0"
-    aws-cdk-lib: "npm:^2.188.0"
+    aws-cdk-lib: "npm:^2.189.0"
     compression: "npm:^1.8.0"
     constructs: "npm:^10.4.2"
     dotenv: "npm:^16.4.7"
