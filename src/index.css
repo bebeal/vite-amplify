@@ -5,25 +5,17 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1;
-  font-weight: 400;
-
-  color-scheme: light dark;
-
-  font-synthesis: none;
+  @apply leading-none font-normal scheme-light-dark antialiased;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* next-themes applies .light or .dark class at the root <html> based on user preference or system setting (prefers-color-scheme) */
 .light {
-  color: #213547;
   background-color: #ffffff;
+  color: #000000;
 }
 
 .dark {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #2a2a2a;
+  color: #ffffff;
 }
