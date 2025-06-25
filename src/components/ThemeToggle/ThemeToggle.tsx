@@ -1,9 +1,10 @@
+import { AsleepFilled, LightFilled } from '@carbon/icons-react';
 import { useTheme } from 'next-themes';
 import { useCallback, useEffect, useState } from 'react';
 
-const getBoxShadow = (theme, resolvedTheme) => {
+const getBoxShadow = (theme?: string, resolvedTheme?: string) => {
   const isLight = resolvedTheme === 'light';
-  const baseColor = resolvedTheme !== 'light' ? '#0d1117' : '#e1e4e8';
+  const baseColor = resolvedTheme !== 'light' ? '#0d1117' : 'white';
 
   const thumbLeft = `calc(1rem * -1) 0 0 2px ${baseColor} inset, 0 0 0 2px ${baseColor} inset`;
   const thumbMiddle = `calc(1rem / 2) 0 0 2px ${baseColor} inset, calc(1rem / -2) 0 0 2px ${baseColor} inset, 0 0 0 2px ${baseColor} inset`;
@@ -61,7 +62,7 @@ export const ThemeToggle = () => {
                 borderRadius: '3px',
                 marginTop: '5px',
                 transition: 'left 300ms cubic-bezier(0.34, 1.56, 0.64, 1)',
-                border: resolvedTheme === 'dark' ? '1px solid #30363d' : '1px solid #d0d7de',
+                border: resolvedTheme === 'dark' ? '1px solid white' : '1px solid #0d1117',
                 boxShadow: '0 1px 0 rgba(0,0,0,0.1)',
               }}
             >
@@ -75,7 +76,7 @@ export const ThemeToggle = () => {
                   marginLeft: '-4px',
                   borderLeft: '4px solid transparent',
                   borderRight: '4px solid transparent',
-                  borderBottom: resolvedTheme === 'dark' ? '4px solid #30363d' : '4px solid #d0d7de',
+                  borderBottom: resolvedTheme === 'dark' ? '4px solid white' : '4px solid #0d1117',
                 }}
               />
               {/* Inner arrow for border effect */}
@@ -91,6 +92,32 @@ export const ThemeToggle = () => {
                 }}
               />
             </div>
+          )}
+          {/* Light theme → show filled sun on the right */}
+          {theme !== 'system' && resolvedTheme === 'light' && (
+            <LightFilled
+              className="absolute top-1/2 -translate-y-1/2 right-1 w-3 h-3"
+            />
+          )}
+          {/* Dark theme → show filled moon on the left */}
+          {theme !== 'system' && resolvedTheme === 'dark' && (
+            <AsleepFilled
+              className="absolute top-1/2 -translate-y-1/2 left-1 w-3 h-3"
+            />
+          )}
+
+          {/* System theme → show current-theme icon centered inside the thumb, inverted color */}
+          {theme === 'system' && (
+            (() => {
+              const CurrentIcon = resolvedTheme === 'dark' ? AsleepFilled : LightFilled;
+              const contrastColor = resolvedTheme === 'dark' ? '#0d1117' : '#e1e4e8';
+              return (
+                <CurrentIcon
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3"
+                  style={{ color: contrastColor }}
+                />
+              );
+            })()
           )}
         </div>
       </div>

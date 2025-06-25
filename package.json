@@ -25,6 +25,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.62.0",
     "express": "^4.21.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
