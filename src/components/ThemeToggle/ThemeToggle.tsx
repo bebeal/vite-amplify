@@ -33,7 +33,7 @@ export const ThemeToggle = () => {
   if (!mounted) return null;
 
   return (
-    <div className='absolute top-2 right-0 p-4 z-[100]'>
+    <div className='absolute top-2 right-0 py-4 pl-4 pr-6 z-[100]'>
       <div
         onClick={cycleTheme}
         className='relative flex w-auto h-auto justify-center items-center gap-1'

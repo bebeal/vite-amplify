@@ -22,6 +22,13 @@ class Api {
     try {
       const { id } = req.params
       const tweet = await getTweet(id)
+      // X's syndication API stopped returning empty entity arrays; react-tweet iterates them unguarded
+      if (tweet) {
+        tweet.entities.hashtags ??= []
+        tweet.entities.urls ??= []
+        tweet.entities.user_mentions ??= []
+        tweet.entities.symbols ??= []
+      }
       res.json({ data: tweet })
     } catch (error) {
       console.error(error)
