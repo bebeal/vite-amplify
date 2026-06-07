@@ -97,7 +97,7 @@ const FeatureIcons = [
 ];
 
 export const FeaturesList = () => (
-  <div className='flex flex-1 flex-wrap justify-center items-center content-center gap-2 text-black dark:text-white h-auto'>
+  <div className='flex flex-wrap justify-center items-center gap-2 text-black dark:text-white h-auto'>
     {FeatureIcons.map(({ Logo, href, label }) => (
       <div key={label} className='flex flex-col items-center p-2 gap-2 leading-none'>
         <a href={href} target='_blank' rel='noopener noreferrer' className='transition-transform hover:scale-110'>
